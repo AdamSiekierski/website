@@ -14,7 +14,6 @@
     font-family: 'VT323', monospace;
   }
   body {
-    background-color: #151519;
     margin: 0 !important;
   }
   #app {
@@ -22,15 +21,28 @@
   }
   #nav {
     font-size: 28px;
-    padding: 5px;
-    position: absolute;
+    padding: 10px;
+    position: fixed;
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    mix-blend-mode: difference;
   }
   #nav a {
-    color: #eeeeee;
+    color: #bbbbbb;
     text-decoration: none;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #bbbbbb;
+    transition: color .3s ease-in-out, border-color .3s ease-in-out;
+  }
+  #nav a:hover {
+    color: #a7a7af;
+    border-color: #a7a7af;
+  }
+  ::selection {
+    background: #151519;
+    color: #999999;
   }
 </style>

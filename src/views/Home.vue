@@ -1,24 +1,23 @@
 <template>
     <div id="wrapper">
         <LandingLabel />
+        <GitHubRepos />
     </div>
 </template>
 <script>
 import LandingLabel from '@/components/LandingLabel.vue';
+import GitHubRepos from '@/components/GitHub Repos.vue';
 
 export default {
   name: 'Home',
   components: {
     LandingLabel,
+    GitHubRepos,
   },
 };
 </script>
-
 <style lang="scss" scoped>
 #wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
 </style>

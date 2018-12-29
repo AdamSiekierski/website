@@ -9,8 +9,10 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.13.0",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {

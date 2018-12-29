@@ -1,6 +1,6 @@
 <template>
     <div id="landingWrapper">
-        <img src="../img/pixelart-ja.png" id="avatar">
+        <img src="@/img/pixelart-ja.png" id="avatar">
         <h1> Adam Siekierski </h1>
         <vue-typer
         :text='["amateur open-source developer"]'
@@ -16,6 +16,7 @@
         caret-animation='smooth'
         id="subtitle"
         ></vue-typer>
+        <img src="@/img/arrow-down.png" id="arrow-down" v-scroll-to="'#githubWrapper'">
     </div>
 </template>
 <script>
@@ -24,31 +25,61 @@ export default {
 };
 </script>
 <style lang="scss">
-#avatar {
-    width: 250px;
-    height: 250px;
-    box-shadow: 0px 0px 20px #000000;
-}
-h1 {
-    font-size: 96px;
-    color: #787878;
-    margin: 0;
-    margin-bottom: -20px;
-    letter-spacing: 3px;
-}
-#subtitle {
-    font-size: 48px;
-    margin: 0;
-    letter-spacing: -2px;
-}
-.vue-typer {
-    .char {
-        color: #5c5c5c;
-    }
-}
+$max-phone: 700px;
 #landingWrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    background-color: #151519;
+    height: 100vh;
+    #avatar {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0px 0px 20px #000000;
+        @media screen and (max-width: $max-phone) {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    h1 {
+        font-size: 96px;
+        color: #787878;
+        margin: 0;
+        margin-bottom: -20px;
+        letter-spacing: 3px;
+        text-align: center;
+        @media screen and (max-width: $max-phone) {
+            font-size: 48px;
+            margin-bottom: -10px;
+        }
+    }
+    #subtitle {
+        font-size: 48px;
+        margin: 0;
+        letter-spacing: -2px;
+        @media screen and (max-width: $max-phone) {
+            font-size: 30px;
+        }
+    }
+    .vue-typer {
+        .char {
+            color: #5c5c5c;
+        }
+    }
+    #arrow-down {
+        opacity: 0.6;
+        transform: scale(0.8, 0.8);
+        position: absolute;
+        bottom: 1%;
+        transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
+        @media screen and (max-width: 700px) {
+            transform: scale(0.4, 0.4);
+        }
+    }
+    #arrow-down:hover {
+        opacity: 0.4;
+    }
 }
 </style>
