@@ -1,11 +1,31 @@
 <template>
-    <div id="githubWrapper">
-            <h1> My GitHub Repositories </h1>
+  <div id="githubWrapper">
+    <h1> My GitHub Repositories </h1>
+    <div id="results">
+      <GitHubItem v-for="item in results" :key="item.id" :repository="item"/>
     </div>
+  </div>
 </template>
 <script>
+import axios from 'axios';
+import GitHubItem from '@/components/GitHub Item.vue';
+
+const API = 'https://api.github.com/users/AdamSiekierski/repos';
 export default {
   name: 'GitHubRepos',
+  data() {
+    return {
+      results: [],
+    };
+  },
+  components: {
+    GitHubItem,
+  },
+  created() {
+    axios.get(API).then((response) => {
+      this.results = response.data;
+    });
+  },
 };
 </script>
 <style lang="scss" scoped>
