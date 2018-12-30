@@ -23,7 +23,7 @@ export default {
     GitHubItem,
   },
   created() {
-    axios.get(API, { headers: { Authorization: 'Bearer e5dd2d28972a83d2cc7f3282e1a086298ea4b7c1' } }).then((response) => {
+    axios.get(API, { headers: { Authorization: 'Bearer e5dd2d28972a83d2cc7f3282e1a086298ea4b7c1' } }).then((response) => { // Hahahahahha, here was my password!
       this.results = response.data;
     });
   },
