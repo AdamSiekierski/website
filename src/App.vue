@@ -1,23 +1,20 @@
 <template>
   <div id="app">
-      <div id="nav">
-        <router-link to="/" id="left">Home</router-link>
-        <router-link to="/about" id="right">About</router-link>
-      </div>
-      <router-view />
+    <div id="nav">
+      <router-link to="/" id="left" v-scroll-to="'#landingWrapper'">Home</router-link>
+      <router-link to="/about" id="right">About</router-link>
+    </div>
+    <router-view />
+    <div id="footer">
+      the end. copyright &copy; adam siekierski.
+    </div>
   </div>
 </template>
-
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=VT323');
-  * {
-    font-family: 'VT323', monospace;
-  }
   body {
     margin: 0 !important;
-  }
-  #app {
-    height: 100vh;
+    font-family: 'VT323', monospace;
   }
   #nav {
     font-size: 28px;
@@ -44,5 +41,35 @@
   ::selection {
     background: #151519;
     color: #999999;
+  }
+  #footer {
+  background-color: #151519;
+  color: #eeeeee;
+  text-align: center;
+  width: 100%;
+  padding: 3px;
+  font-size: 20px;
+  height: 28px;
+  box-sizing: border-box;
+  }
+  .whiteFooter {
+    color: #151519;
+    background-color: #eeeeee;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #151519;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #242426;
   }
 </style>

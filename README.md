@@ -1,34 +1,16 @@
-# landing-page
-
-## Project setup
+# Adam Siekierski - My GitHub.io page project
+That's my website project. It's based on Vue.js and built with vue-cli
+### How to edit it, rebuild and run
+- Clone to any folder on your PC or Mac
+- To run
 ```
-yarn install
+yarn serve
 ```
-
-### Compiles and hot-reloads for development
+- To edit
 ```
-yarn run serve
+Open folder in any code editor, files in /src folder
 ```
-
-### Compiles and minifies for production
+- To build
 ```
-yarn run build
+yarn build
 ```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
