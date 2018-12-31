@@ -158,6 +158,5 @@ transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
   body{
     animation: turn-on 4s linear;
     animation-fill-mode:forwards;
-    text-shadow: 0px 0px 3px;
   }
 </style>
