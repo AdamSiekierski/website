@@ -23,7 +23,7 @@ export default {
     GitHubItem,
   },
   created() {
-    axios.get(API, { auth: { username: 'AdamSiekierski', password: 'BgrmaKQQQVz2Evj' } }).then((response) => { // Hahahahahha, here was my password!
+    axios.get(API).then((response) => { // Hahahahahha, here was my password!
       this.results = response.data;
     });
   },
