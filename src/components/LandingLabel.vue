@@ -71,7 +71,9 @@ $max-phone: 700px;
         opacity: 0.6;
         transform: scale(0.8, 0.8);
         transition: opacity 0.3s ease-in-out;
+        margin-top: 30px;
         cursor: pointer;
+        -webkit-filter: drop-shadow(0px 0px 4px #B5BCB7);
         @media screen and (max-width: 700px) {
             transform: scale(0.4, 0.4);
         }
