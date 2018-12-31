@@ -70,8 +70,6 @@ $max-phone: 700px;
     #arrow-down {
         opacity: 0.6;
         transform: scale(0.8, 0.8);
-        position: absolute;
-        bottom: 1%;
         transition: opacity 0.3s ease-in-out;
         cursor: pointer;
         @media screen and (max-width: 700px) {

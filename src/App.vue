@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/" id="left" v-scroll-to="'#landingWrapper'">Home</router-link>
+      <router-link to="/" id="left">Home</router-link>
       <router-link to="/about" id="right">About</router-link>
     </div>
     <router-view />
