@@ -111,9 +111,9 @@
       bottom:0;
       right:0;
       background:linear-gradient(transparentize($screen-background,1) 50%,
-transparentize(darken($screen-background,10),0.75) 50%),
-linear-gradient(90deg,transparentize(#ff0000,0.94),
-transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
+      transparentize(darken($screen-background,10),0.75) 50%),
+      linear-gradient(90deg,transparentize(#ff0000,0.94),
+      transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
       z-index:2;
       background-size:100% 2px, 3px 100%;
       pointer-events:none;

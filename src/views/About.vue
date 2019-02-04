@@ -14,7 +14,7 @@
                 erase-style='clear'
                 :erase-on-complete='false'
                 caret-animation='smooth'
-                id="aboutmeTitle"
+                class="aboutmeTitle"
                 @typed="isTyped = true"
             ></vue-typer>
             <p v-if="isTyped === true"><b>Hello! </b>My name is Adam, and I'm from Poland (Poznan, exactly). I'm an amateur programmer - programming just for hobby. Mostly JavaScript - Frontend. Favourite framework - Vue.js.</p>
@@ -30,7 +30,7 @@
                 erase-style='clear'
                 :erase-on-complete='false'
                 caret-animation='smooth'
-                id="aboutmeTitle"
+                class="aboutmeTitle"
                 v-if="isTyped === true"
             ></vue-typer>
         </div>
@@ -57,7 +57,7 @@ export default {
         #aboutmeText {
             background-color: #eeeeee;
             min-height: 80vh;
-            box-shadow: 0px 0px 20px #000000;
+            box-shadow: 0 0 20px #000000;
             width: 50vw;
             box-sizing: border-box;
             padding: 10px;
@@ -66,7 +66,7 @@ export default {
                 width: 85vw;
             }
         }
-        #aboutmeTitle {
+        .aboutmeTitle {
             font-weight: 400;
             font-size: 70px;
             margin: 0;

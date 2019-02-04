@@ -9,7 +9,7 @@
 </template>
 <script>
 import axios from 'axios';
-import GitHubItem from '@/components/GitHub Item.vue';
+import GitHubItem from './GitHub Item.vue';
 
 const API = 'https://api.github.com/users/AdamSiekierski/repos';
 export default {
@@ -41,8 +41,7 @@ export default {
     font-size: 60px;
     color: #151519;
     font-weight: 400;
-    margin: 0;
-    margin-top: 50px;
+    margin: 50px 0 0;
     text-align: center;
     width: 100%;
     @media screen and (max-width: 700px) {

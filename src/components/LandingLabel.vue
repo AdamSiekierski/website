@@ -1,6 +1,6 @@
 <template>
     <div id="landingWrapper">
-        <img src="@/img/pixelart-ja.png" id="avatar">
+        <img src="../img/pixelart-ja.png" id="avatar" alt="Adam Siekierski">
         <h1> Adam Siekierski </h1>
         <vue-typer
         :text='["amateur open-source developer"]'
@@ -16,7 +16,7 @@
         caret-animation='smooth'
         id="subtitle"
         ></vue-typer>
-        <img src="@/img/arrow-down.png" id="arrow-down" v-scroll-to="'#githubWrapper'">
+        <img src="../img/arrow-down.png" id="arrow-down" v-scroll-to="'#githubWrapper'" alt="V">
     </div>
 </template>
 <script>
@@ -36,18 +36,17 @@ $max-phone: 700px;
     #avatar {
         width: 250px;
         height: 250px;
-        box-shadow: 0px 0px 20px #000000;
+        box-shadow: 0 0 20px #000000;
         @media screen and (max-width: $max-phone) {
             width: 150px;
             height: 150px;
         }
     }
     h1 {
-        font-size: 96px;
-        color: #787878;
-        margin: 0;
-        margin-bottom: -20px;
-        letter-spacing: 3px;
+      font-size: 96px;
+      color: #787878;
+      margin: 0 0 -20px;
+      letter-spacing: 3px;
         text-align: center;
         @media screen and (max-width: $max-phone) {
             font-size: 48px;
