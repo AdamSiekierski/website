@@ -44,14 +44,14 @@
     color: #999999;
   }
   #footer {
-  background-color: #151519;
-  color: #eeeeee;
-  text-align: center;
-  width: 100%;
-  padding: 3px;
-  font-size: 20px;
-  height: 28px;
-  box-sizing: border-box;
+    background-color: #151519;
+    color: #eeeeee;
+    text-align: center;
+    width: 100%;
+    padding: 3px;
+    font-size: 20px;
+    height: 28px;
+    box-sizing: border-box;
   }
   .whiteFooter {
     color: #151519;

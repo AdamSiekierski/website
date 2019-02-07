@@ -17,7 +17,7 @@
                 class="aboutmeTitle"
                 @typed="isTyped = true"
             ></vue-typer>
-            <p v-if="isTyped === true"><b>Hello! </b>My name is Adam, and I'm from Poland (Poznan, exactly). I'm an amateur programmer - programming just for hobby. Mostly JavaScript - Frontend. Favourite framework - Vue.js.</p>
+            <p v-if="isTyped === true"><b>Hello! </b>My name is Adam, and I'm from Poland (Poznan, exactly). I'm an amateur frontend programmer - programming just for hobby. I like Vue.js, React is nice too, but I only use it with Gatsby. In future, I want to be a programmer. </p>
             <vue-typer
                 :text='["};"]'
                 :repeat='0'

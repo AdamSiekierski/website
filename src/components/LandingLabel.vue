@@ -3,7 +3,7 @@
         <img src="../img/pixelart-ja.png" id="avatar" alt="Adam Siekierski">
         <h1> Adam Siekierski </h1>
         <vue-typer
-        :text='["amateur open-source developer"]'
+        :text='["in future, wants to be a front-end dev"]'
         :repeat='0'
         :shuffle='false'
         initial-action='typing'
