@@ -1,9 +1,8 @@
 <template>
-<!-- eslint-disable -->
     <div v-if="fork === false && name !== 'adamsiekierski.github.io'" id="itemContainer" v-on:click="redirect">
         <span class="label">name: </span><h2>{{ name }}</h2>
         <span class="label">description: </span><h2>{{ desc }}.</h2>
-        <span class="label">technology: </span><h2>{{ language }}</h2>
+        <span class="label" v-if="language != null">technology: </span><h2>{{ language }}</h2>
     </div>
 </template>
 <script>

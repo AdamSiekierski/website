@@ -4,7 +4,6 @@
     <div id="results">
       <GitHubItem v-for="item in results" :key="item.id" :repository="item"/>
     </div>
-    <div style="height: 20px"></div>
   </div>
 </template>
 <script>
@@ -37,6 +36,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  padding-bottom: 20px;
   h1 {
     font-size: 60px;
     color: #151519;
@@ -50,8 +51,6 @@ export default {
   }
 }
 #results {
-  width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-row-gap: 15px;
