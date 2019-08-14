@@ -1,40 +1,46 @@
 <template>
-<!-- eslint-disable -->
-    <div id="aboutmeWrapper">
-        <div id="aboutmeText">
-            <vue-typer
-                :text='["about-me() {"]'
-                :repeat='0'
-                :shuffle='false'
-                initial-action='typing'
-                :pre-type-delay='150'
-                :type-delay='100'
-                :pre-erase-delay='2000'
-                :erase-delay='250'
-                erase-style='clear'
-                :erase-on-complete='false'
-                caret-animation='smooth'
-                class="aboutmeTitle"
-                @typed="isTyped = true"
-            ></vue-typer>
-            <p v-if="isTyped === true"><b>Hello! </b>My name is Adam, and I'm from Poland (Poznan, exactly). I'm an amateur frontend programmer - programming just for hobby. I like Vue.js, React is nice too, but I only use it with Gatsby. In future, I want to be a programmer. </p>
-            <vue-typer
-                :text='["};"]'
-                :repeat='0'
-                :shuffle='false'
-                initial-action='typing'
-                :pre-type-delay='300'
-                :type-delay='300'
-                :pre-erase-delay='2000'
-                :erase-delay='250'
-                erase-style='clear'
-                :erase-on-complete='false'
-                caret-animation='smooth'
-                class="aboutmeTitle"
-                v-if="isTyped === true"
-            ></vue-typer>
-        </div>
+  <div id="aboutmeWrapper">
+    <div id="aboutmeText">
+      <vue-typer
+        :text='["about-me() {"]'
+        :repeat='0'
+        :shuffle='false'
+        initial-action='typing'
+        :pre-type-delay='150'
+        :type-delay='100'
+        :pre-erase-delay='2000'
+        :erase-delay='250'
+        erase-style='clear'
+        :erase-on-complete='false'
+        caret-animation='smooth'
+        class="aboutmeTitle"
+        @typed="isTyped = true"
+      ></vue-typer>
+      <p v-if="isTyped === true"><b>Hello! </b>
+        My name is Adam and I'm from Poznań, Poland. I'm a hobbyist programmer, specialized in front-end and Node.js
+        development. I love JavaScript, but trying to learn Python for Machine Learning and Data Science.
+        On my GitHub, you can find some of my experiments, from which you can take some code and learn something (but
+        not from all :)). You can find me on Instagram (@a.siekierski), Twitter (@adamsiekierski), and I'm planning to
+        open a YouTube channel.
+        Contact me at <a href="mailto:adam.siekiera@outlook.com">adam.siekiera@outlook.com</a>.
+      </p>
+      <vue-typer
+        :text='["};"]'
+        :repeat='0'
+        :shuffle='false'
+        initial-action='typing'
+        :pre-type-delay='300'
+        :type-delay='300'
+        :pre-erase-delay='2000'
+        :erase-delay='250'
+        erase-style='clear'
+        :erase-on-complete='false'
+        caret-animation='smooth'
+        class="aboutmeTitle"
+        v-if="isTyped === true"
+      ></vue-typer>
     </div>
+  </div>
 </template>
 <script>
 export default {
@@ -47,38 +53,44 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-    #aboutmeWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background-color: #151519;
-        #aboutmeText {
-            background-color: #eeeeee;
-            min-height: 80vh;
-            box-shadow: 0 0 20px #000000;
-            width: 50vw;
-            box-sizing: border-box;
-            padding: 10px;
-            margin-top: 50px;
-            @media screen and (max-width: 1100px) {
-                width: 85vw;
-            }
-        }
-        .aboutmeTitle {
-            font-weight: 400;
-            font-size: 70px;
-            margin: 0;
-            @media screen and (max-width: 800px) {
-                font-size: 50px;
-            }
-        }
-        p {
-            font-size: 33px;
-            @media screen and (max-width: 800px) {
-                font-size: 25px;
-            }
-        }
+  #aboutmeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #151519;
+
+    #aboutmeText {
+      background-color: #eeeeee;
+      min-height: 80vh;
+      box-shadow: 0 0 20px #000000;
+      width: 50vw;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-top: 50px;
+      @media screen and (max-width: 1100px) {
+        width: 85vw;
+      }
+      a {
+        color: black;
+      }
     }
+
+    .aboutmeTitle {
+      font-weight: 400;
+      font-size: 70px;
+      margin: 0;
+      @media screen and (max-width: 800px) {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      font-size: 33px;
+      @media screen and (max-width: 800px) {
+        font-size: 25px;
+      }
+    }
+  }
 </style>
