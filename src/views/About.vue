@@ -20,7 +20,7 @@
         My name is Adam and I'm from Poznań, Poland. I'm a hobbyist programmer, specialized in front-end and Node.js
         development. I love JavaScript, but trying to learn Python for Machine Learning and Data Science.
         On my GitHub, you can find some of my experiments, from which you can take some code and learn something (but
-        not from all :)). You can find me on Instagram (@a.siekierski), Twitter (@adamsiekierski), and I'm planning to
+        not from all :)). You can find me on Instagram (<a href="https://instagram.com/a.siekierski">@a.siekierski</a>), Twitter (<a href="https://twitter.com/a_siekierski">@a_siekierski</a>), and I'm planning to
         open a YouTube channel. In future, I want to become a professional programmer.
         Contact me at <a href="mailto:adam.siekiera@outlook.com">adam.siekiera@outlook.com</a>.
       </p>
