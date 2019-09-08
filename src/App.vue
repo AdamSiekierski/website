@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/" id="left">Home</router-link>
+      <a href="https://adamsiekierski.github.io/blog" id="left">Blog</a>
       <router-link to="/about" id="right">About</router-link>
     </div>
     <router-view />

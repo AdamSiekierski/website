@@ -1,17 +1,24 @@
+<!-- eslint-ignore-file -->
 <template>
-    <div v-if="fork === false && name !== 'adamsiekierski.github.io'" id="itemContainer" v-on:click="redirect">
-        <span class="label">name: </span><h2>{{ name }}</h2>
-        <span class="label">description: </span><h2>{{ desc }}.</h2>
-        <span class="label" v-if="language != null">technology: </span><h2>{{ language }}</h2>
-    </div>
+  <div
+    v-if="fork === false && name !== 'adamsiekierski.github.io'"
+    id="itemContainer"
+    v-on:click="redirect"
+  >
+    <span class="label">name:</span>
+    <h2 id="name">{{ name }}</h2>
+    <span class="label">description:</span>
+    <h2 id="description">{{ desc }}</h2>
+    <span class="label" v-if="language != null">technology:</span>
+    <h2 id="language">{{ language }}</h2>
+  </div>
 </template>
 <script>
 export default {
-  name: 'GitHubItem',
+  name: 'GithubItem',
   props: {
     repository: {
       type: Object,
-      reqired: true,
     },
   },
   data() {
@@ -46,10 +53,10 @@ export default {
     margin: 0;
     font-size: 30px;
   }
-  @media screen and (max-width:  1200px){
+  @media screen and (max-width: 1200px) {
     width: 45vw;
   }
-  @media screen and (max-width:  700px){
+  @media screen and (max-width: 700px) {
     width: 90vw;
     height: 150px;
   }
@@ -58,22 +65,22 @@ export default {
     color: #151519;
   }
 }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #dfdfdf;
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #aaaaaa;
-    border: 2.5px solid #dfdfdf;
-    border-radius: 5px;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #9f9f9f;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border: 2.5px solid #dfdfdf;
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9f9f9f;
+}
 </style>
