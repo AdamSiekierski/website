@@ -39,8 +39,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 #itemContainer {
-  width: 30vw;
-  min-height: 175px;
   cursor: pointer;
   border: 10px solid #37373b;
   color: #151519;
@@ -48,17 +46,13 @@ export default {
   box-sizing: border-box;
   padding: 5px;
   overflow: auto;
+  height: 225px;
+  font-size: 14px;
+
   h2 {
     font-weight: 400;
     margin: 0;
-    font-size: 30px;
-  }
-  @media screen and (max-width: 1200px) {
-    width: 45vw;
-  }
-  @media screen and (max-width: 700px) {
-    width: 90vw;
-    height: 150px;
+    font-size: 18px;
   }
   a {
     text-decoration: none;

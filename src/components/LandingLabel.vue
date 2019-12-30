@@ -1,9 +1,9 @@
 <template>
     <div id="landingWrapper">
-        <img src="../img/pixelart-ja.png" id="avatar" alt="Adam Siekierski">
+        <img src="http://gravatar.com/avatar/74a5ec816e9fd6b196d1dc8ae4ae6115?s=500" id="avatar" alt="Adam Siekierski"> <!-- Gravatar for hash of my email -->
         <h1> Adam Siekierski </h1>
         <vue-typer
-        :text='["not-professional front-end \ndeveloper"]'
+        :text='["non-professional fullstack developer"]'
         :repeat='0'
         :shuffle='false'
         initial-action='typing'
@@ -30,37 +30,32 @@ $max-phone: 700px;
   justify-content: center;
   background-color: #151519;
   height: 100vh;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
   #avatar {
-    width: 250px;
     height: 250px;
-    box-shadow: 0 0 20px #040408;
     @media screen and (max-width: $max-phone) {
-        width: 150px;
-        height: 150px;
+      height: 150px;
     }
   }
   h1 {
-    font-size: 96px;
+    font-size: 40px;
     color: #787878;
-    margin: 0 0 -20px;
+    margin: 0;
     letter-spacing: 3px;
-      text-align: center;
-      @media screen and (max-width: $max-phone) {
-          font-size: 48px;
-          margin-bottom: -10px;
-      }
+    text-align: center;
   }
   #subtitle {
-    font-size: 48px;
+    font-size: 25px;
     margin: 0;
     letter-spacing: -2px;
     text-align: center;
-    @media screen and (max-width: $max-phone) {
-      font-size: 30px;
-    }
+    word-wrap: break-word;
   }
   .vue-typer {
-    white-space: pre;
     .char {
       color: #5c5c5c;
     }

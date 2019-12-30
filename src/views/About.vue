@@ -16,13 +16,10 @@
         class="aboutmeTitle"
         @typed="isTyped = true"
       ></vue-typer>
-      <p v-if="isTyped === true"><b>Hello! </b>
-        My name is Adam and I'm from Poznań, Poland. I'm a hobbyist programmer, specialized in front-end and Node.js
-        development. I love JavaScript, but trying to learn Python for Machine Learning and Data Science.
-        On my GitHub, you can find some of my experiments, from which you can take some code and learn something (but
-        not from all :)). You can find me on Instagram (<a href="https://instagram.com/a.siekierski">@a.siekierski</a>), Twitter (<a href="https://twitter.com/a_siekierski">@a_siekierski</a>), and I'm planning to
-        open a YouTube channel. In future, I want to become a professional programmer.
-        Contact me at <a href="mailto:adam.siekiera@outlook.com">adam.siekiera@outlook.com</a>.
+      <p v-if="isTyped === true" style="text-align: justify">
+        hello world, my name is adam! i'm a hobbyist fullstack developer based in poznań, poland. i'm specialized in javascript, node.js, react, react-native and vue.js. currently, my main goals for the future are mobile development in swift and kotlin, and machine learning in python. you can find me on my instagram (<a href="https://instagram.com/a.siekierski">@a.siekierski</a>), twitter (<a href="https://twitter.com/a_siekierski">@a_siekierski</a>), and I'm planning to
+        open a youtube channel. after finishing high school, i would want to start working as a proffesional programmer.
+        contact me at <a href="mailto:adam.siekiera@outlook.com">adam.siekiera@outlook.com</a>.
       </p>
       <vue-typer
         :text='["};"]'
@@ -67,7 +64,7 @@ export default {
       box-shadow: 0 0 20px #000000;
       width: 50vw;
       box-sizing: border-box;
-      padding: 10px;
+      padding: 20px;
       margin-top: 50px;
       @media screen and (max-width: 1100px) {
         width: 85vw;
@@ -79,18 +76,12 @@ export default {
 
     .aboutmeTitle {
       font-weight: 400;
-      font-size: 70px;
+      font-size: 30px;
       margin: 0;
-      @media screen and (max-width: 800px) {
-        font-size: 50px;
-      }
     }
 
     p {
-      font-size: 33px;
-      @media screen and (max-width: 800px) {
-        font-size: 25px;
-      }
+      font-size: 18px;
     }
   }
 </style>

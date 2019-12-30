@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <a href="https://adamsiekierski.github.io/blog" id="left">Blog</a>
-      <router-link to="/about" id="right">About</router-link>
+      <router-link to="/about" id="right" v-if="this.$route.name === 'Home'">About</router-link>
+      <router-link to="/" id="right" v-if="this.$route.name === 'About'">Home</router-link>
     </div>
     <router-view />
     <div id="footer">
@@ -11,14 +12,15 @@
   </div>
 </template>
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=VT323');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
   body {
     margin: 0 !important;
-    font-family: 'VT323', monospace;
+    font-family: 'Roboto Mono', monospace;
     background-color: #000000;
   }
+
   #nav {
-    font-size: 28px;
+    font-size: 18px;
     padding: 10px;
     position: fixed;
     width: 100%;
@@ -49,8 +51,7 @@
     text-align: center;
     width: 100%;
     padding: 3px;
-    font-size: 20px;
-    height: 28px;
+    font-size: 14px;
     box-sizing: border-box;
   }
   .whiteFooter {
