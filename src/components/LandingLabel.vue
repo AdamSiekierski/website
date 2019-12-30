@@ -37,14 +37,16 @@ $max-phone: 700px;
 
   #avatar {
     height: 250px;
+    box-shadow: 0px 0px 41px -8px black;
     @media screen and (max-width: $max-phone) {
       height: 150px;
     }
   }
+
   h1 {
     font-size: 40px;
     color: #787878;
-    margin: 0;
+    margin: 15px 0 0 0;
     letter-spacing: 3px;
     text-align: center;
   }
