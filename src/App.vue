@@ -7,7 +7,7 @@
     </div>
     <router-view />
     <div id="footer">
-      the end. copyright &copy; adam siekierski.
+      the end. copyright {{ new Date().getFullYear() }} &copy; adam siekierski.
     </div>
   </div>
 </template>
