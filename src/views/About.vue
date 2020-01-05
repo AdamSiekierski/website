@@ -14,6 +14,7 @@
       <vue-typed-js
         :strings='["};"]'
         v-if="isTyped"
+        :showCursor="false"
       ><span class="typing aboutmeTitle"></span></vue-typed-js>
     </div>
   </div>

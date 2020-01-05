@@ -5,6 +5,7 @@
         <vue-typed-js
         :strings='["non-professional fullstack developer"]'
         id="subtitle"
+        :showCursor="false"
         ><span class="typing"></span></vue-typed-js>
         <img src="../img/arrow-down.png" id="arrow-down" v-scroll-to="'#githubWrapper'" alt="V">
     </div>
