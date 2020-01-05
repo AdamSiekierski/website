@@ -40,9 +40,9 @@ export default {
 <style lang="scss" scoped>
 #itemContainer {
   cursor: pointer;
-  border: 10px solid #37373b;
-  color: #151519;
-  background-color: #dfdfdf;
+  border: 10px solid black;
+  color: black;
+  background-color: white;
   box-sizing: border-box;
   padding: 5px;
   overflow: auto;
@@ -56,7 +56,7 @@ export default {
   }
   a {
     text-decoration: none;
-    color: #151519;
+    color: black;
   }
 }
 /* width */
@@ -65,16 +65,16 @@ export default {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #dfdfdf;
+  background: white;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #aaaaaa;
-  border: 2.5px solid #dfdfdf;
+  border: 2.5px solid white;
   border-radius: 5px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #9f9f9f;
+  background: #999;
 }
 </style>

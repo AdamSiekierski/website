@@ -17,6 +17,7 @@
     "vue-router": "^3.0.7",
     "vue-scrollTo": "^2.4.1",
     "vue-scrollto": "^2.15.0",
+    "vue-typed-js": "^0.1.2",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {

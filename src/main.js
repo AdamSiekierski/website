@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import VueTyperPlugin from 'vue-typer';
+import VueTypedJs from 'vue-typed-js';
 import VueScrollTo from 'vue-scrollto';
 import App from './App.vue';
 import router from './router';
 
 Vue.config.productionTip = false;
-Vue.use(VueTyperPlugin);
+Vue.use(VueTypedJs);
 Vue.use(VueScrollTo);
 
 new Vue({

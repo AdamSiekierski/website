@@ -31,7 +31,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #githubWrapper {
-  background-color: #eeeeee;
+  background-color: white;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
@@ -40,7 +40,7 @@ export default {
   padding-bottom: 20px;
 
   h1 {
-    color: #151519;
+    color: black;
     font-weight: bold;
     margin: 50px 0 0;
     text-align: center;

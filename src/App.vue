@@ -32,22 +32,22 @@
     mix-blend-mode: difference;
   }
   #nav a {
-    color: #bbbbbb;
+    color: white;
     text-decoration: none;
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 1px solid white;
     transition: color .3s ease-in-out, border-color .3s ease-in-out;
   }
   #nav a:hover {
-    color: #a7a7af;
-    border-color: #a7a7af;
+    color: #bbb;
+    border-color: #bbb;
   }
   ::selection {
-    background: #151519;
-    color: #999999;
+    background: #333;
+    color: #bbb;
   }
   #footer {
-    background-color: #151519;
-    color: #eeeeee;
+    background-color: black;
+    color: white;
     text-align: center;
     width: 100%;
     padding: 3px;
@@ -55,8 +55,8 @@
     box-sizing: border-box;
   }
   .whiteFooter {
-    color: #151519;
-    background-color: #eeeeee;
+    color: black;
+    background-color: white;
   }
   /* width */
   ::-webkit-scrollbar {
@@ -64,14 +64,14 @@
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #151519;
+    background: black;
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #27272a;
+    background: #333;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #242426;
+    background: #444;
   }
 </style>
