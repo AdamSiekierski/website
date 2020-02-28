@@ -1,18 +1,24 @@
 <template>
-    <div id="landingWrapper">
-        <img src="http://gravatar.com/avatar/74a5ec816e9fd6b196d1dc8ae4ae6115?s=500" id="avatar" alt="Adam Siekierski"> <!-- Gravatar for hash of my email -->
-        <h1> Adam Siekierski </h1>
-        <vue-typed-js
-        :strings='["non-professional fullstack developer"]'
-        id="subtitle"
-        :showCursor="false"
-        ><span class="typing"></span></vue-typed-js>
-        <img src="../img/arrow-down.png" id="arrow-down" v-scroll-to="'#githubWrapper'" alt="V">
-    </div>
+  <div id="landingWrapper">
+    <img
+      src="https://gravatar.com/avatar/74a5ec816e9fd6b196d1dc8ae4ae6115?s=500"
+      id="avatar"
+      alt="Adam Siekierski"
+    />
+    <h1>Adam Siekierski</h1>
+    <vue-typed-js
+      :strings="['non-professional fullstack developer']"
+      id="subtitle"
+      :showCursor="false"
+    >
+      <span class="typing"></span>
+    </vue-typed-js>
+    <img src="../img/arrow-down.png" id="arrow-down" v-scroll-to="'#githubWrapper'" alt="V" />
+  </div>
 </template>
 <script>
 export default {
-  name: 'LandingLabel',
+  name: 'Landing',
 };
 </script>
 <style lang="scss">
@@ -58,7 +64,7 @@ $max-phone: 700px;
     margin-top: 30px;
     cursor: pointer;
     @media screen and (max-width: 700px) {
-        transform: scale(0.4, 0.4);
+      transform: scale(0.4, 0.4);
     }
   }
   #arrow-down:hover {

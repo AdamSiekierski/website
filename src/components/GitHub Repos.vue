@@ -2,13 +2,13 @@
   <div id="githubWrapper">
     <h1>My GitHub Repositories</h1>
     <div id="results">
-      <GitHubItem v-for="item in results" :key="item.id" :repository="item" />
+      <Card v-for="item in results" :key="item.id" :repository="item" />
     </div>
   </div>
 </template>
 <script>
 import axios from 'axios';
-import GitHubItem from './GitHub Item.vue';
+import Card from './Card.vue';
 
 const API = 'https://api.github.com/users/AdamSiekierski/repos';
 
@@ -20,7 +20,7 @@ export default {
     };
   },
   components: {
-    GitHubItem,
+    Card,
   },
   created() {
     axios.get(API).then((response) => {

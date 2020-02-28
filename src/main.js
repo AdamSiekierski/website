@@ -10,5 +10,7 @@ Vue.use(VueScrollTo);
 
 new Vue({
   router,
-  render(h) { return h(App); },
+  render(h) {
+    return h(App);
+  },
 }).$mount('#app');

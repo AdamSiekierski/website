@@ -1,4 +1,3 @@
-<!-- eslint-ignore-file -->
 <template>
   <div
     v-if="fork === false && name !== 'adamsiekierski.github.io'"
@@ -15,7 +14,7 @@
 </template>
 <script>
 export default {
-  name: 'GithubItem',
+  name: 'Card',
   props: {
     repository: {
       type: Object,
