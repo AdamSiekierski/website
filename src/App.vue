@@ -10,11 +10,11 @@
   </div>
 </template>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
 
 body {
-  margin: 0 !important;
-  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
   background-color: #000000;
 }
 
