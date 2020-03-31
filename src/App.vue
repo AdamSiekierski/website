@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <a href="https://adamsiekierski.github.io/blog" id="left">Blog</a>
+      <a href="/blog" id="left">Blog</a>
       <router-link to="/about" id="right" v-if="this.$route.name === 'Home'">About</router-link>
       <router-link to="/" id="right" v-if="this.$route.name === 'About'">Home</router-link>
     </div>
@@ -10,11 +10,11 @@
   </div>
 </template>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   background-color: #000000;
 }
 
