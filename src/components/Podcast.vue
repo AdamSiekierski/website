@@ -42,6 +42,7 @@ export default {
 }
 
 .podcast-popup {
+  max-width: 600px;
   width: 80%;
   background-color: white;
   color: black;
