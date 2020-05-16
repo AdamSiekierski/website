@@ -5,7 +5,7 @@
       id="avatar"
       alt="Adam Siekierski"
     />
-    <h1>Adam Siekierski</h1>
+    <h1>adam siekierski</h1>
     <vue-typed-js
       :strings="['non-professional fullstack developer']"
       id="subtitle"

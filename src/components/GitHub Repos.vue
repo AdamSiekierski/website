@@ -1,6 +1,6 @@
 <template>
   <div id="githubWrapper">
-    <h1>My GitHub Repositories</h1>
+    <h1>my github repositories</h1>
     <div id="results">
       <Card v-for="item in results" :key="item.id" :repository="item" />
     </div>
