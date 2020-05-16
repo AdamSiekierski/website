@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <a href="/blog" id="left">Blog</a>
-      <router-link to="/about" id="right" v-if="this.$route.name === 'Home'">About</router-link>
-      <router-link to="/" id="right" v-if="this.$route.name === 'About'">Home</router-link>
+      <a href="/blog" id="left">blog</a>
+      <router-link to="/about" id="right" v-if="this.$route.name === 'Home'">about</router-link>
+      <router-link to="/" id="right" v-if="this.$route.name === 'About'">home</router-link>
     </div>
     <router-view />
     <div id="footer">the end. copyright {{ new Date().getFullYear() }} &copy; adam siekierski.</div>
   </div>
 </template>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
 
 body {
   margin: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   background-color: #000000;
 }
 
@@ -30,20 +30,24 @@ body {
   justify-content: space-between;
   mix-blend-mode: difference;
 }
+
 #nav a {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid white;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
+
 #nav a:hover {
   color: #bbb;
   border-color: #bbb;
 }
+
 ::selection {
   background: #333;
   color: #bbb;
 }
+
 #footer {
   background-color: black;
   color: white;
@@ -53,10 +57,12 @@ body {
   font-size: 14px;
   box-sizing: border-box;
 }
+
 .whiteFooter {
   color: black;
   background-color: white;
 }
+
 /* width */
 ::-webkit-scrollbar {
   width: 15px;

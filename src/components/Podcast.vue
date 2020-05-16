@@ -1,0 +1,104 @@
+<template>
+  <div class="podcast-popup-wrapper">
+    <div class="podcast-popup">
+      <div class="podcast-popup-header">
+        <div class="podcast-popup-close" @click="$emit('close')"></div>
+      </div>
+      <div class="podcast-popup-content">
+        <p>
+          check out my podcast! i'm a co-host of require podcast - a first polish podcast strictly
+          about webdevelopment!
+        </p>
+        <p>
+          <a href="https://require.podcast.gq">https://require.podcast.gq</a>
+        </p>
+      </div>
+      <div class="podcast-popup-footer">
+        <p class="podcast-popup-footer-dont-again" @click="$emit('close-not-show')">
+          don't show this again
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'PodcastPopup',
+};
+</script>
+<style lang="scss" scoped>
+.podcast-popup-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.podcast-popup {
+  width: 80%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+
+  a {
+    color: #ff5370;
+  }
+}
+
+.podcast-popup-header {
+  display: flex;
+  justify-content: flex-end;
+
+  .podcast-popup-close {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      right: 0;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.podcast-popup-footer {
+  text-align: left;
+
+  &-dont-again {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 1em;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+}
+</style>
