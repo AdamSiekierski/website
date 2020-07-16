@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div class="wrapper">
     <transition name="fade">
       <PodcastPopup
         v-if="isPopupOpen"
@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#wrapper {
+.wrapper {
   min-height: 100%;
 }
 

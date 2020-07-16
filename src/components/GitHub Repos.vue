@@ -1,7 +1,7 @@
 <template>
-  <div id="githubWrapper">
+  <div class="repos">
     <h1>my github repositories</h1>
-    <div id="results">
+    <div class="cards">
       <Card v-for="item in results" :key="item.id" :repository="item" />
     </div>
   </div>
@@ -30,10 +30,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#githubWrapper {
+.repos {
   background-color: white;
   min-height: 100vh;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +46,8 @@ export default {
     width: 100%;
   }
 }
-#results {
+
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-row-gap: 15px;

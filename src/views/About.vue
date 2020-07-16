@@ -1,11 +1,8 @@
 <template>
-  <div id="aboutmeWrapper">
-    <div id="aboutmeText">
-      <vue-typed-js
-        :strings="['about-me() {']"
-        @onComplete="() => (isTyped = true)"
-        :showCursor="false"
-        ><span class="typing aboutmeTitle"></span
+  <div class="wrapper">
+    <div class="about-me">
+      <vue-typed-js :strings="['/about']" @onComplete="() => (isTyped = true)" :showCursor="false"
+        ><span class="typing title"></span
       ></vue-typed-js>
       <p v-if="isTyped === true" style="text-align: justify">
         hello world, my name is adam! i'm a hobbyist fullstack developer based in poznań, poland.
@@ -17,9 +14,6 @@
         to open a youtube channel. after finishing high school, i would want to start working as a
         proffesional programmer. contact me at <a href="mailto:a@siekierski.ml">a@siekierski.ml</a>.
       </p>
-      <vue-typed-js :strings="['};']" v-if="isTyped" :showCursor="false"
-        ><span class="typing aboutmeTitle"></span
-      ></vue-typed-js>
     </div>
   </div>
 </template>
@@ -34,7 +28,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#aboutmeWrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,12 +36,11 @@ export default {
   min-height: 100vh;
   background-color: black;
 
-  #aboutmeText {
+  .about-me {
     background-color: black;
     border: 5px solid white;
     min-height: 80vh;
     width: 50vw;
-    box-sizing: border-box;
     padding: 20px;
     margin-top: 50px;
     color: white;
@@ -59,7 +52,7 @@ export default {
     }
   }
 
-  .aboutmeTitle {
+  .title {
     font-weight: 400;
     font-size: 30px;
     margin: 0;

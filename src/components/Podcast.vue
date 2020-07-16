@@ -63,7 +63,6 @@ export default {
     height: 25px;
     width: 25px;
     cursor: pointer;
-    transition: opacity 0.3s;
 
     &::before,
     &::after {
@@ -85,7 +84,7 @@ export default {
     }
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.6;
     }
   }
 }

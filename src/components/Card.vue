@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="fork === false && name !== 'adamsiekierski.github.io'"
-    id="itemContainer"
+    class="card"
     v-on:click="redirect"
   >
     <span class="label">name:</span>
@@ -37,12 +37,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#itemContainer {
+.card {
   cursor: pointer;
   border: 10px solid black;
   color: black;
   background-color: white;
-  box-sizing: border-box;
   padding: 5px;
   overflow: auto;
   height: 225px;
@@ -53,11 +52,13 @@ export default {
     margin: 0;
     font-size: 18px;
   }
+
   a {
     text-decoration: none;
     color: black;
   }
 }
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
