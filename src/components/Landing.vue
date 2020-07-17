@@ -15,7 +15,7 @@
         <span class="typing"></span>
       </vue-typed-js>
     </h3>
-    <img src="../img/arrow-down.png" class="arrow-down" v-scroll-to="'.repos'" alt="V" />
+    <img src="../img/arrow-down.png" class="arrow-down" v-scroll-to="'.about'" alt="V" />
   </div>
 </template>
 <script>
@@ -29,7 +29,6 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: black;
   color: white;
   height: 100vh;
   width: 100%;

@@ -44,19 +44,29 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease;
+
+  .podcast-popup {
+    transition: transform 0.5s ease;
+  }
 }
 
 .fade-enter {
   opacity: 0.5;
-  transform: translateY(-50px);
+
+  .podcast-popup {
+    transform: translateY(-50px);
+  }
 }
 
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(50px);
+
+  .podcast-popup {
+    transform: translateY(50px);
+  }
 }
 </style>
