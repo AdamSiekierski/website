@@ -1,9 +1,9 @@
 <template>
   <div class="app">
     <nav class="nav">
-      <a href="/blog" class="left">blog</a>
-      <router-link to="/about" class="right" v-if="this.$route.name === 'Home'">about</router-link>
-      <router-link to="/" class="right" v-else>home</router-link>
+      <router-link to="/" active-class="--active">home</router-link>
+      <router-link to="/projects">projects</router-link>
+      <router-link to="/uses">uses</router-link>
     </nav>
     <router-view />
     <footer class="footer">
@@ -36,18 +36,22 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   mix-blend-mode: difference;
 
   a {
     color: white;
     text-decoration: none;
-    border-bottom: 1px solid white;
+    margin: 0 5px;
 
     &:hover {
       color: #bbb;
       border-color: #bbb;
     }
+  }
+
+  .router-link-exact-active {
+    border-bottom: 1px solid white;
   }
 }
 

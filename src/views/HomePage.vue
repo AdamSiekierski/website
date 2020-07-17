@@ -8,20 +8,20 @@
       />
     </transition>
     <Landing />
-    <GitHubRepos />
+    <About />
   </div>
 </template>
 <script>
 import Landing from '@/components/Landing.vue';
-import GitHubRepos from '@/components/GitHub Repos.vue';
+import About from '@/components/About.vue';
 import PodcastPopup from '@/components/Podcast.vue';
 
 export default {
   name: 'Home',
   components: {
     Landing,
-    GitHubRepos,
     PodcastPopup,
+    About,
   },
   data() {
     return {
@@ -45,10 +45,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.wrapper {
-  min-height: 100%;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease, transform 0.5s ease;

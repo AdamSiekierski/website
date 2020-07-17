@@ -1,21 +1,30 @@
 import { shallowMount } from '@vue/test-utils';
 import Card from '../../src/components/Card.vue';
 
-const redirectMethod = jest.fn();
-
 const repository = {
   name: 'Repository',
   fork: false,
   language: 'JavaScript',
   description: 'Test Repo description',
-  adress: 'https://github.com',
+  html_url: 'https://github.com',
 };
+
 const wrapper = shallowMount(Card, {
   propsData: { repository },
-  methods: { redirect: redirectMethod },
 });
 
 describe('Card', () => {
+  const { location } = window.location;
+
+  beforeAll(() => {
+    delete window.location;
+    window.location = { assign: jest.fn() };
+  });
+
+  afterAll(() => {
+    window.location = location;
+  });
+
   it('has a created hook', () => {
     expect(typeof Card.render).toBe('function');
   });
@@ -27,7 +36,12 @@ describe('Card', () => {
   });
 
   it('redirects when button clicked', () => {
-    wrapper.find('#itemContainer').trigger('click');
-    expect(redirectMethod).toBeCalled();
+    Object.defineProperties(window.location, {
+      assign: jest.fn(),
+    });
+
+    wrapper.find('.card').trigger('click');
+
+    expect(window.location.assign).toHaveBeenCalledWith(repository.html_url);
   });
 });

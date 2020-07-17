@@ -6,13 +6,15 @@
       alt="Adam Siekierski"
     />
     <h1>adam siekierski</h1>
-    <vue-typed-js
-      :strings="['non-professional fullstack developer']"
-      class="subtitle"
-      :showCursor="false"
-    >
-      <span class="typing"></span>
-    </vue-typed-js>
+    <h3>
+      <vue-typed-js
+        :strings="['non-professional fullstack developer']"
+        class="subtitle"
+        :showCursor="false"
+      >
+        <span class="typing"></span>
+      </vue-typed-js>
+    </h3>
     <img src="../img/arrow-down.png" class="arrow-down" v-scroll-to="'.repos'" alt="V" />
   </div>
 </template>
@@ -28,6 +30,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   background-color: black;
+  color: white;
   height: 100vh;
   width: 100%;
   padding: 10px;
@@ -42,20 +45,15 @@ export default {
   }
 
   h1 {
-    font-size: 40px;
-    color: white;
     margin: 15px 0 0 0;
-    letter-spacing: 3px;
     text-align: center;
   }
 
-  .subtitle {
-    font-size: 25px;
+  h3 {
     margin: 0;
-    letter-spacing: -2px;
     text-align: center;
     word-wrap: break-word;
-    color: white;
+    font-weight: normal;
   }
 
   .arrow-down {
