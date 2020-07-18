@@ -3,7 +3,7 @@
     <div class="about-content">
       <h1>#about</h1>
       <p>
-        Hi, thanks for visiting my site 👋! I'm a {{ age }} year old hobbyist full stack web
+        Hi 👋! Thanks for visiting my site! I'm a {{ age }} year old hobbyist full stack web
         developer, based in Poznań, Poland 🇵🇱.
       </p>
       <p>
@@ -42,14 +42,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .about {
-  width: 100%;
-  min-height: 100vh;
   color: white;
 
   &-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 0 50px;
   }
 
   a {

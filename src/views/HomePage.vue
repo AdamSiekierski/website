@@ -9,19 +9,22 @@
     </transition>
     <Landing />
     <About />
+    <Technologies />
   </div>
 </template>
 <script>
+import PodcastPopup from '@/components/Podcast.vue';
 import Landing from '@/components/Landing.vue';
 import About from '@/components/About.vue';
-import PodcastPopup from '@/components/Podcast.vue';
+import Technologies from '@/components/Technologies/Technologies.vue';
 
 export default {
   name: 'Home',
   components: {
-    Landing,
     PodcastPopup,
+    Landing,
     About,
+    Technologies,
   },
   data() {
     return {
