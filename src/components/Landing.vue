@@ -15,7 +15,21 @@
         <span class="typing"></span>
       </vue-typed-js>
     </h3>
-    <img src="../img/arrow-down.png" class="arrow-down" v-scroll-to="'.about'" alt="V" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      focusable="true"
+      width="100px"
+      height="100px"
+      viewBox="0 0 24 24"
+      class="arrow-down"
+      v-scroll-to="'.about'"
+    >
+      <path
+        d="M5.843 9.593L11.5 15.25l5.657-5.657l-.707-.707l-4.95 4.95l-4.95-4.95l-.707.707z"
+        fill="#ffffff"
+      />
+    </svg>
   </div>
 </template>
 <script>
@@ -57,16 +71,10 @@ export default {
 
   .arrow-down {
     opacity: 1;
-    transform: scale(0.8, 0.8);
-    margin-top: 30px;
     cursor: pointer;
 
     &:hover {
       opacity: 0.8;
-    }
-
-    @media screen and (max-width: 700px) {
-      transform: scale(0.4, 0.4);
     }
   }
 }

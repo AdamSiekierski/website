@@ -10,7 +10,9 @@
         I've started coding about 5 years ago, trying to learn C++. Now my main interests are OSS
         development in JavaScript and TypeScript, creating apps in Swift, and recently I've began
         learning Go. Check out <router-link to="/projects">projects</router-link> for some of my
-        projects and contributions.
+        projects and contributions. Also go and see my
+        <a href="https://blog.siekierski.ml">blog</a> - maybe one day I will start posting more
+        often.
       </p>
       <p>
         If you want to take a look at stuff I use at everyday basis, I recommend looking at
