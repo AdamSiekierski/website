@@ -10,6 +10,7 @@
     <Landing />
     <About />
     <Technologies />
+    <Contact />
   </div>
 </template>
 <script>
@@ -17,6 +18,7 @@ import PodcastPopup from '@/components/Podcast.vue';
 import Landing from '@/components/Landing.vue';
 import About from '@/components/About.vue';
 import Technologies from '@/components/Technologies/Technologies.vue';
+import Contact from '@/components/Contact.vue';
 
 export default {
   name: 'Home',
@@ -25,6 +27,7 @@ export default {
     Landing,
     About,
     Technologies,
+    Contact,
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="about-content">
-      <h1>#about</h1>
+      <h2>#about</h2>
       <p>
         Hi 👋! Thanks for visiting my site! I'm a {{ age }} year old hobbyist full stack web
         developer, based in Poznań, Poland 🇵🇱.
@@ -47,7 +47,8 @@ export default {
   &-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 50px;
+    padding-bottom: 0;
   }
 
   a {

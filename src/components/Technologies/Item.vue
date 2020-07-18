@@ -45,7 +45,7 @@ export default {
   }
 
   &-logo {
-    height: 80px;
+    height: 70px;
     margin-bottom: 10px;
   }
 }

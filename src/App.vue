@@ -31,7 +31,7 @@ body {
 .nav {
   font-size: 18px;
   padding: 10px;
-  position: fixed;
+  position: absolute;
   width: 100%;
   text-align: center;
   display: flex;
