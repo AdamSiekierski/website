@@ -125,7 +125,7 @@
 <style lang="scss" scoped>
 .wrapper {
   color: white;
-  padding: 50px;
+  padding: 50px 25px;
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;

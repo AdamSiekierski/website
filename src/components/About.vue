@@ -47,7 +47,7 @@ export default {
   &-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 25px;
     padding-bottom: 0;
   }
 

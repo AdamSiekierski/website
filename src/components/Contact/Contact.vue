@@ -4,6 +4,10 @@
       <div class="contact-split">
         <div>
           <h2>#contact-me</h2>
+          <i style="font-size: 0.8em">
+            Feel free to contact me via this form. You can text me about anything - even how you
+            feel today.
+          </i>
           <form
             action="https://formspree.io/xpzyoelj"
             method="POST"
@@ -178,12 +182,12 @@ export default {
   &-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 25px;
   }
 
   &-split {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 50px;
   }
 
