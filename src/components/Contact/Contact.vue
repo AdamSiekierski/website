@@ -42,7 +42,7 @@
         <div>
           <h2>#find-me</h2>
           <div class="contact-find">
-            <Item v-for="site in sites" :site="site" :key="site.name" />
+            <Item v-for="site of sites" :site="site" :key="site.name" />
           </div>
         </div>
       </div>
