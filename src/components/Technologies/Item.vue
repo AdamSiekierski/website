@@ -5,6 +5,8 @@
   </a>
 </template>
 <script>
+import { hoverBg } from '@/utils/hoverBg';
+
 export default {
   name: 'Item',
   props: {
@@ -20,7 +22,7 @@ export default {
     styles() {
       return {
         '--bg-color': this.technology.bgColor,
-        '--bg-color-hover': `${this.technology.bgColor}EE`,
+        '--bg-color-hover': hoverBg(this.technology.bgColor),
         '--fg-color': this.technology.fgColor,
       };
     },
@@ -36,12 +38,12 @@ export default {
   align-items: center;
   padding: 20px;
   cursor: pointer;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--fg-color);
   text-decoration: none;
 
   &:hover {
-    background-color: var(--bg-color-hover);
+    background: var(--bg-color-hover);
   }
 
   &-logo {

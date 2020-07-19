@@ -1,22 +1,23 @@
 <template>
-  <a class="contact-find-item" :style="styles" :href="link">
-    <img :src="icon" :alt="name" />
+  <a class="contact-find-item" :style="styles" :href="site.link">
+    <img :src="site.icon" :alt="site.name" />
   </a>
 </template>
 <script>
 export default {
   name: 'Item',
   props: {
-    icon: String,
-    link: String,
-    name: String,
-    bgColor: String,
+    site: {
+      icon: String,
+      link: String,
+      name: String,
+      bgColor: String,
+    },
   },
   computed: {
     styles() {
       return {
-        '--bg-color': this.bgColor,
-        '--bg-color-hover': `${this.bgColor}EE`,
+        '--bg-color': this.site.bgColor,
       };
     },
   },
@@ -25,20 +26,18 @@ export default {
 <style lang="scss">
 .contact-find-item {
   display: block;
-  width: 50px;
-  height: 50px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
+  background: black;
 
   img {
-    width: 32px;
-    height: 32px;
+    width: 100%;
   }
 
   &:hover {
-    background-color: var(--bg-color-hover);
+    background: var(--bg-color);
   }
 }
 </style>

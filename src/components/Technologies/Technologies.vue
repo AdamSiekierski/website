@@ -11,17 +11,17 @@
 <script>
 import Item from './Item.vue';
 
-import reactLogo from '../../img/react.svg';
-import gatsbyLogo from '../../img/gatsby.svg';
-import nodejsLogo from '../../img/nodejs.svg';
-import jsLogo from '../../img/js.svg';
-import tsLogo from '../../img/ts.svg';
-import vueLogo from '../../img/vue.svg';
-import nextjsLogo from '../../img/nextjs.svg';
-import graphqlLogo from '../../img/graphql.svg';
-import denoLogo from '../../img/deno.svg';
-import swiftLogo from '../../img/swift.svg';
-import firebaseLogo from '../../img/firebase.svg';
+import reactLogo from '../../img/technologies/react.svg';
+import gatsbyLogo from '../../img/technologies/gatsby.svg';
+import nodejsLogo from '../../img/technologies/nodejs.svg';
+import jsLogo from '../../img/technologies/js.svg';
+import tsLogo from '../../img/technologies/ts.svg';
+import vueLogo from '../../img/technologies/vue.svg';
+import nextjsLogo from '../../img/technologies/nextjs.svg';
+import graphqlLogo from '../../img/technologies/graphql.svg';
+import denoLogo from '../../img/technologies/deno.svg';
+import swiftLogo from '../../img/technologies/swift.svg';
+import firebaseLogo from '../../img/technologies/firebase.svg';
 
 export default {
   name: 'About',

@@ -14,6 +14,7 @@ module.exports = {
     'no-plusplus': 'off',
     'arrow-parens': 'off',
     'array-callback-return': 'off',
+    'import/prefer-default-export': 'off',
   },
 
   parserOptions: {

@@ -42,14 +42,7 @@
         <div>
           <h2>#find-me</h2>
           <div class="contact-find">
-            <Item
-              v-for="site in sites"
-              :key="site.name"
-              :name="site.name"
-              :link="site.link"
-              :icon="site.icon"
-              :bgColor="site.bgColor"
-            />
+            <Item v-for="site in sites" :site="site" :key="site.name" />
           </div>
         </div>
       </div>
@@ -60,7 +53,11 @@
 import * as yup from 'yup';
 import Item from './Item.vue';
 
-import githubLogo from '../../img/github.png';
+import githubLogo from '../../img/websites/github.png';
+import twitterLogo from '../../img/websites/twitter.svg';
+import instagramLogo from '../../img/websites/instagram.svg';
+import linkedinLogo from '../../img/websites/linkedin.svg';
+import redditLogo from '../../img/websites/reddit.svg';
 
 const schema = yup.object().shape({
   email: yup
@@ -95,6 +92,30 @@ export default {
           link: 'https://github.com/AdamSiekierski',
           icon: githubLogo,
           bgColor: '#24292E',
+        },
+        {
+          name: 'Instagram',
+          link: 'https://instagram.com/a.siekierski',
+          icon: instagramLogo,
+          bgColor: 'linear-gradient(45deg, #EB001E, #6100BF)',
+        },
+        {
+          name: 'Twitter',
+          link: 'https://twitter.com/a_siekierski',
+          icon: twitterLogo,
+          bgColor: '#1DA1F2',
+        },
+        {
+          name: 'Linkedin',
+          link: 'https://www.linkedin.com/in/adam-siekierski-b6b7401b2/',
+          icon: linkedinLogo,
+          bgColor: '#0077B5',
+        },
+        {
+          name: 'Reddit',
+          link: 'https://www.reddit.com/user/adamsiekierski',
+          icon: redditLogo,
+          bgColor: '#FF4500',
         },
       ],
     };
@@ -177,6 +198,8 @@ export default {
   &-form {
     input,
     textarea {
+      -webkit-appearance: none;
+      border-radius: 0;
       display: block;
       font-family: inherit;
       padding: 5px 0;
@@ -233,6 +256,11 @@ export default {
       display: block;
       margin: 1em 0;
     }
+  }
+
+  &-find {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   }
 }
 
