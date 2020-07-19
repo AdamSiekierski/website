@@ -210,6 +210,7 @@ export default {
       outline: none;
       border: none;
       border-bottom: 3px solid white;
+      resize: none;
 
       transition: border-bottom 0.5s ease;
 

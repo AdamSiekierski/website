@@ -19,7 +19,7 @@
         <router-link to="/uses">uses</router-link> 😄.
       </p>
       <p>
-        Also, I'm an author of Polish web development podcast -
+        Also, I'm an author of a Polish JavaScript podcast -
         <a href="https://require.podcast.gq">Require Podcast</a>. If you can understand this
         difficult language, check it out 🎙.
       </p>
