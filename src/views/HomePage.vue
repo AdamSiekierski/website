@@ -8,20 +8,26 @@
       />
     </transition>
     <Landing />
-    <GitHubRepos />
+    <About />
+    <Technologies />
+    <Contact />
   </div>
 </template>
 <script>
-import Landing from '@/components/Landing.vue';
-import GitHubRepos from '@/components/GitHub Repos.vue';
 import PodcastPopup from '@/components/Podcast.vue';
+import Landing from '@/components/Landing.vue';
+import About from '@/components/About.vue';
+import Technologies from '@/components/Technologies/Technologies.vue';
+import Contact from '@/components/Contact/Contact.vue';
 
 export default {
   name: 'Home',
   components: {
-    Landing,
-    GitHubRepos,
     PodcastPopup,
+    Landing,
+    About,
+    Technologies,
+    Contact,
   },
   data() {
     return {
@@ -44,23 +50,29 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.wrapper {
-  min-height: 100%;
-}
-
+<style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease;
+
+  .podcast-popup {
+    transition: transform 0.5s ease;
+  }
 }
 
 .fade-enter {
   opacity: 0.5;
-  transform: translateY(-50px);
+
+  .podcast-popup {
+    transform: translateY(-50px);
+  }
 }
 
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(50px);
+
+  .podcast-popup {
+    transform: translateY(50px);
+  }
 }
 </style>
