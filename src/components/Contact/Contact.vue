@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <section class="contact">
     <div class="contact-content">
       <div class="contact-split">
         <div>
@@ -11,7 +11,7 @@
             class="contact-form"
           >
             <label>
-              Email:
+              Your email:
               <input
                 type="text"
                 name="_replyto"
@@ -32,7 +32,7 @@
             </label>
             <button
               type="submit"
-              :disabled="message.error || email.error || !email.value || !message.value"
+              :disabled="message.error || email.error || !email.value || !message.value || loading"
               :class="(message.error || email.error) && '--error'"
             >
               Send
@@ -41,14 +41,26 @@
         </div>
         <div>
           <h2>#find-me</h2>
-          <div class="contact-find"></div>
+          <div class="contact-find">
+            <Item
+              v-for="site in sites"
+              :key="site.name"
+              :name="site.name"
+              :link="site.link"
+              :icon="site.icon"
+              :bgColor="site.bgColor"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 import * as yup from 'yup';
+import Item from './Item.vue';
+
+import githubLogo from '../../img/github.png';
 
 const schema = yup.object().shape({
   email: yup
@@ -63,6 +75,9 @@ const schema = yup.object().shape({
 
 export default {
   name: 'Contact',
+  components: {
+    Item,
+  },
   data() {
     return {
       email: {
@@ -73,11 +88,22 @@ export default {
         value: '',
         error: false,
       },
+      loading: false,
+      sites: [
+        {
+          name: 'GitHub',
+          link: 'https://github.com/AdamSiekierski',
+          icon: githubLogo,
+          bgColor: '#24292E',
+        },
+      ],
     };
   },
   methods: {
     submitForm(e) {
       e.preventDefault();
+
+      this.loading = true;
 
       schema.isValid({ email: this.email.value, message: this.message.value }).then((isValid) => {
         if (isValid) {
@@ -91,14 +117,18 @@ export default {
               Accept: 'application/json',
             },
           }).then((res) => {
+            this.loading = false;
+
             if (res.status === 200) {
               this.$toast.success('Successfully sent an email!');
             } else {
               this.$toast.error("Couldn't send the email. Try again later");
             }
-          });
 
-          form.reset();
+            form.reset();
+            this.email = { value: '', error: false };
+            this.message = { value: '', error: false };
+          });
         }
       });
     },

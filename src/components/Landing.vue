@@ -1,5 +1,5 @@
 <template>
-  <div class="landing">
+  <section class="landing">
     <img
       src="https://gravatar.com/avatar/74a5ec816e9fd6b196d1dc8ae4ae6115?s=500"
       class="avatar"
@@ -19,8 +19,8 @@
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       focusable="true"
-      width="100px"
-      height="100px"
+      width="50px"
+      height="50px"
       viewBox="0 0 24 24"
       class="arrow-down"
       v-scroll-to="'.about'"
@@ -28,9 +28,10 @@
       <path
         d="M5.843 9.593L11.5 15.25l5.657-5.657l-.707-.707l-4.95 4.95l-4.95-4.95l-.707.707z"
         fill="#ffffff"
+        transform="translate(-11 -11) scale(2)"
       />
     </svg>
-  </div>
+  </section>
 </template>
 <script>
 export default {
@@ -72,6 +73,7 @@ export default {
   .arrow-down {
     opacity: 1;
     cursor: pointer;
+    margin-top: 1em;
 
     &:hover {
       opacity: 0.8;

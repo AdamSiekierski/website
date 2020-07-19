@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <section class="about">
     <div class="about-content">
       <h2>#about</h2>
       <p>
@@ -28,7 +28,7 @@
         snowboarding and travelling (especially hiking in the mountains).
       </p>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 export default {

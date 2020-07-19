@@ -1,12 +1,12 @@
 <template>
-  <div class="technologies">
+  <section class="technologies">
     <div class="technologies-content">
       <h2>#technologies</h2>
       <div class="technologies-grid">
         <Item v-for="technology of technologies" :key="technology.name" :technology="technology" />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 import Item from './Item.vue';
@@ -38,14 +38,14 @@ export default {
           logo: tsLogo,
           bgColor: '#007acc',
           fgColor: '#ffffff',
-          website: 'https://typescriptlang.org',
+          website: 'https://www.typescriptlang.org',
         },
         {
           name: 'JavaScript',
           logo: jsLogo,
           bgColor: '#f7df1e',
           fgColor: '#000000',
-          website: 'https://nodejs.org',
+          website: 'https://developer.mozilla.org/en-US/docs/Web',
         },
         {
           name: 'React',
@@ -55,18 +55,18 @@ export default {
           website: 'https://reactjs.org',
         },
         {
-          name: 'Node.js',
-          logo: nodejsLogo,
-          bgColor: '#539E43',
-          fgColor: '#ffffff',
-          website: 'https://nodejs.org',
-        },
-        {
-          name: 'Deno',
-          logo: denoLogo,
+          name: 'Next.js',
+          logo: nextjsLogo,
           bgColor: '#ffffff',
           fgColor: '#000000',
-          website: 'https://deno.land',
+          website: 'https://nextjs.org',
+        },
+        {
+          name: 'React Native',
+          logo: reactLogo,
+          bgColor: '#53C1DE',
+          fgColor: '#000000',
+          website: 'https://reactnative.dev',
         },
         {
           name: 'GraphQL',
@@ -83,11 +83,11 @@ export default {
           website: 'https://gatsbyjs.org',
         },
         {
-          name: 'Next.js',
-          logo: nextjsLogo,
-          bgColor: '#ffffff',
-          fgColor: '#000000',
-          website: 'https://nextjs.org',
+          name: 'Node.js',
+          logo: nodejsLogo,
+          bgColor: '#539E43',
+          fgColor: '#ffffff',
+          website: 'https://nodejs.org',
         },
         {
           name: 'Vue.js',
@@ -104,11 +104,11 @@ export default {
           website: 'https://swift.org/',
         },
         {
-          name: 'React Native',
-          logo: reactLogo,
-          bgColor: '#53C1DE',
+          name: 'Deno',
+          logo: denoLogo,
+          bgColor: '#ffffff',
           fgColor: '#000000',
-          website: 'https://reactnative.dev',
+          website: 'https://deno.land',
         },
         {
           name: 'Firebase',
