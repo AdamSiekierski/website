@@ -12,7 +12,7 @@
       :tags="project.tags"
     />
     <p>
-      More of my projects at my <a href="https://github.com/AdamSiekierski">GitHub</a>. Give 'em
+      More of my projects are at my <a href="https://github.com/AdamSiekierski">GitHub</a>. Give 'em
       some <b>stars</b>, and feel free to follow me 😆.
     </p>
   </div>
@@ -67,7 +67,7 @@ export default {
         },
         {
           name: 'requirepodcast-ios',
-          description: "Require Podcast's iOS app. Made with only native iOS's API's.",
+          description: "Require Podcast's iOS app. Made with only native iOS's APIs.",
           url: 'https://github.com/requirepodcast/ios',
           tags: [swift],
         },
