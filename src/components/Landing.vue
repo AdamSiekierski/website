@@ -1,37 +1,20 @@
 <template>
-  <section class="landing">
+  <div class="landing">
     <img
       src="https://gravatar.com/avatar/74a5ec816e9fd6b196d1dc8ae4ae6115?s=500"
       class="avatar"
       alt="Adam Siekierski"
     />
     <h1>adam siekierski</h1>
-    <h3>
-      <vue-typed-js
-        :strings="['non-professional fullstack developer']"
-        class="subtitle"
-        :showCursor="false"
-      >
-        <span class="typing"></span>
-      </vue-typed-js>
-    </h3>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      focusable="true"
-      width="50px"
-      height="50px"
-      viewBox="0 0 24 24"
-      class="arrow-down"
-      v-scroll-to="'.about'"
+    <vue-typed-js
+      :strings="['non-professional fullstack developer']"
+      class="subtitle"
+      :showCursor="false"
     >
-      <path
-        d="M5.843 9.593L11.5 15.25l5.657-5.657l-.707-.707l-4.95 4.95l-4.95-4.95l-.707.707z"
-        fill="#ffffff"
-        transform="translate(-11 -11) scale(2)"
-      />
-    </svg>
-  </section>
+      <span class="typing"></span>
+    </vue-typed-js>
+    <img src="../img/arrow-down.png" class="arrow-down" v-scroll-to="'.repos'" alt="V" />
+  </div>
 </template>
 <script>
 export default {
@@ -44,7 +27,7 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  background-color: black;
   height: 100vh;
   width: 100%;
   padding: 10px;
@@ -59,24 +42,34 @@ export default {
   }
 
   h1 {
+    font-size: 40px;
+    color: white;
     margin: 15px 0 0 0;
+    letter-spacing: 3px;
     text-align: center;
   }
 
-  h3 {
+  .subtitle {
+    font-size: 25px;
     margin: 0;
+    letter-spacing: -2px;
     text-align: center;
     word-wrap: break-word;
-    font-weight: normal;
+    color: white;
   }
 
   .arrow-down {
     opacity: 1;
+    transform: scale(0.8, 0.8);
+    margin-top: 30px;
     cursor: pointer;
-    margin-top: 1em;
 
     &:hover {
       opacity: 0.8;
+    }
+
+    @media screen and (max-width: 700px) {
+      transform: scale(0.4, 0.4);
     }
   }
 }

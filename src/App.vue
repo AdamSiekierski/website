@@ -1,9 +1,9 @@
 <template>
   <div class="app">
     <nav class="nav">
-      <router-link to="/" active-class="--active">home</router-link>
-      <router-link to="/projects">projects</router-link>
-      <router-link to="/uses">uses</router-link>
+      <a href="/blog" class="left">blog</a>
+      <router-link to="/about" class="right" v-if="this.$route.name === 'Home'">about</router-link>
+      <router-link to="/" class="right" v-else>home</router-link>
     </nav>
     <router-view />
     <footer class="footer">
@@ -31,27 +31,23 @@ body {
 .nav {
   font-size: 18px;
   padding: 10px;
-  position: absolute;
+  position: fixed;
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   mix-blend-mode: difference;
 
   a {
     color: white;
     text-decoration: none;
-    margin: 0 5px;
+    border-bottom: 1px solid white;
 
     &:hover {
       color: #bbb;
       border-color: #bbb;
     }
-  }
-
-  .router-link-exact-active {
-    border-bottom: 1px solid white;
   }
 }
 
@@ -65,8 +61,8 @@ body {
 }
 
 ::selection {
-  background: white;
-  color: black;
+  background: #333;
+  color: #bbb;
 }
 
 ::-webkit-scrollbar {

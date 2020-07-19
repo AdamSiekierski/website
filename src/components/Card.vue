@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     redirect() {
-      window.location.assign(this.adress);
+      window.location.href = this.adress;
     },
   },
 };

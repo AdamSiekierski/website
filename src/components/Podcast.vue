@@ -6,8 +6,8 @@
       </div>
       <div class="podcast-popup-content">
         <p>
-          Check out my podcast! I'm a co-host of Require Podcast - a Polish podcast about web
-          development!
+          check out my podcast! i'm a co-host of require podcast - a first polish podcast strictly
+          about webdevelopment!
         </p>
         <p>
           <a href="https://require.podcast.gq">https://require.podcast.gq</a>
@@ -15,7 +15,7 @@
       </div>
       <div class="podcast-popup-footer">
         <p class="podcast-popup-footer-dont-again" @click="$emit('close-not-show')">
-          Don't show this again
+          don't show this again
         </p>
       </div>
     </div>
@@ -26,7 +26,7 @@ export default {
   name: 'PodcastPopup',
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .podcast-popup-wrapper {
   width: 100%;
   height: 100vh;

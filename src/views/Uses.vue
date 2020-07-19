@@ -127,7 +127,7 @@
   color: white;
   padding: 50px;
   min-height: 100vh;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
