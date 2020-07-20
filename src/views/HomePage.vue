@@ -14,9 +14,9 @@
   </div>
 </template>
 <script>
-import PodcastPopup from '@/components/Podcast.vue';
-import Landing from '@/components/Landing.vue';
-import About from '@/components/About.vue';
+import PodcastPopup from '@/components/Podcast/Podcast.vue';
+import Landing from '@/components/Landing/Landing.vue';
+import About from '@/components/About/About.vue';
 import Technologies from '@/components/Technologies/Technologies.vue';
 import Contact from '@/components/Contact/Contact.vue';
 
