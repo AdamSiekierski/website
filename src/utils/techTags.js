@@ -64,7 +64,7 @@ export const cli = {
 };
 
 export const frontend = {
-  name: 'Website',
+  name: 'Frontend',
   color: '#ffffff',
   fg: '#000000',
 };
