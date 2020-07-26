@@ -12,13 +12,15 @@
       :tags="project.tags"
     />
     <p>
-      More of my projects are at my <a href="https://github.com/AdamSiekierski">GitHub</a>. Give 'em
-      some <b>stars</b>, and feel free to follow me 😆.
+      More of my projects are at my
+      <a href="https://github.com/AdamSiekierski">GitHub</a>. Give 'em
+      some
+      <b>stars</b>, and feel free to follow me 😆.
     </p>
   </div>
 </template>
 <script>
-import Project from '@/components/Project/Project.vue';
+import Project from "@/components/Project/Project.vue";
 import {
   gatsby,
   react,
@@ -29,10 +31,16 @@ import {
   graphql,
   typescript,
   swift,
-} from '../utils/techTags';
+  go,
+  pkg,
+  app,
+  cli,
+  frontend,
+  backend,
+} from "../utils/techTags";
 
 export default {
-  name: 'Projects',
+  name: "Projects",
   components: {
     Project,
   },
@@ -40,48 +48,58 @@ export default {
     return {
       projects: [
         {
-          name: 'gatsby-plugin-nodejs',
-          description: 'Gatsby plugin for easy integration with Node.js servers.',
-          url: 'https://github.com/AdamSiekierski/gatsby-plugin-nodejs',
-          tags: [gatsby, react, javascript, nodejs],
+          name: "gatsby-plugin-nodejs",
+          description:
+            "Gatsby plugin for easy integration with Node.js servers.",
+          url: "https://github.com/AdamSiekierski/gatsby-plugin-nodejs",
+          tags: [gatsby, react, javascript, nodejs, pkg],
         },
         {
-          name: 'requirepodcast-studio',
+          name: "requirepodcast-studio",
           description:
             "An all-in-one web app for podcast production, made by Require Podcast for Require Podcast. Episode video rendering with ffmpeg, generating promotional images, integration with GitHub's OAuth.",
-          url: 'https://github.com/requirepodcast/studio',
-          tags: [typescript, nodejs, javascript],
+          url: "https://github.com/requirepodcast/studio",
+          tags: [typescript, nodejs, javascript, backend],
         },
         {
-          name: 'writes.',
-          description: 'App for sharing ideas for school projects. Coming soon 🔜.',
-          url: 'https://github.com/writesapp/website',
-          tags: [firebase, react, javascript, nodejs, vuejs],
-        },
-        {
-          name: 'blog',
+          name: "writes.",
           description:
-            'My blog. I sometimes post something there, so feel free to check it out 😄.',
-          url: 'https://github.com/AdamSiekierski/blog',
-          tags: [javascript, react, gatsby, graphql],
+            "App for sharing ideas for school projects. Coming soon 🔜.",
+          url: "https://github.com/writesapp/website",
+          tags: [firebase, react, javascript, nodejs, vuejs, app],
         },
         {
-          name: 'requirepodcast-ios',
-          description: "Require Podcast's iOS app. Made with only native iOS's APIs.",
-          url: 'https://github.com/requirepodcast/ios',
-          tags: [swift],
-        },
-        {
-          name: 'holdmabeer',
+          name: "Gittie",
           description:
-            'Let your app do something important. A simple package with more modern approach at setTimeout 🍺.',
-          url: 'https://github.com/AdamSiekierski/holdmabeer',
-          tags: [typescript, nodejs],
+            "Quickly create .gitignore in your project using one simple command",
+          url: "https://github.com/AdamSiekierski/gittie",
+          tags: [go, cli],
         },
         {
-          name: 'gatsby-pl',
-          description: 'Polish translation of Gatsby.js docs.',
-          url: 'https://github.com/gatsbyjs/gatsby-pl',
+          name: "blog",
+          description:
+            "My blog. I sometimes post something there, so feel free to check it out 😄.",
+          url: "https://github.com/AdamSiekierski/blog",
+          tags: [javascript, react, gatsby, graphql, frontend],
+        },
+        {
+          name: "requirepodcast-ios",
+          description:
+            "Require Podcast's iOS app. Made with only native iOS's APIs.",
+          url: "https://github.com/requirepodcast/ios",
+          tags: [swift, app],
+        },
+        {
+          name: "holdmabeer",
+          description:
+            "Let your app do something important. A simple package with more modern approach at setTimeout 🍺.",
+          url: "https://github.com/AdamSiekierski/holdmabeer",
+          tags: [typescript, nodejs, pkg],
+        },
+        {
+          name: "gatsby-pl",
+          description: "Polish translation of Gatsby.js docs.",
+          url: "https://github.com/gatsbyjs/gatsby-pl",
           tags: [gatsby],
         },
       ],

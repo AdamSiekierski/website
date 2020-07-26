@@ -1,22 +1,22 @@
 <template>
   <div class="projects-item">
     <h3>
-      {{ name
-      }}<a :href="url" :style="{ margin: '0 1ch' }"
-        ><img class="github-logo" src="../../img/websites/github.png"
-      /></a>
+      {{ name }}
+      <a :href="url" :style="{ margin: '0 1ch' }">
+        <img class="github-logo" src="../../img/websites/github.png" />
+      </a>
     </h3>
     <p>{{ description }}</p>
     <div class="project-item-tags">
-      <Tag v-for="tag of tags" :key="tag.name" :name="tag.name" :color="tag.color" />
+      <Tag v-for="tag of tags" :key="tag.name" :name="tag.name" :color="tag.color" :fg="tag.fg" />
     </div>
   </div>
 </template>
 <script>
-import Tag from './Tag.vue';
+import Tag from "./Tag.vue";
 
 export default {
-  name: 'Projects',
+  name: "Projects",
   props: {
     name: String,
     description: String,

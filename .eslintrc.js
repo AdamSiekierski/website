@@ -16,6 +16,7 @@ module.exports = {
     'array-callback-return': 'off',
     'import/prefer-default-export': 'off',
     'object-curly-newline': 'off',
+    quotes: 'off',
   },
 
   parserOptions: {
