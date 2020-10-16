@@ -1,7 +1,7 @@
 <template>
   <section class="landing">
     <img
-      src="https://gravatar.com/avatar/74a5ec816e9fd6b196d1dc8ae4ae6115?s=500"
+      src="@/img/avatar.jpg"
       class="avatar"
       alt="Adam Siekierski"
     />
