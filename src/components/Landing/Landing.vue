@@ -6,24 +6,16 @@
       alt="Adam Siekierski"
     />
     <h1>adam siekierski</h1>
-    <h3>
-      <vue-typed-js
-        :strings="['non-professional fullstack developer']"
-        class="subtitle"
-        :showCursor="false"
-      >
-        <span class="typing"></span>
-      </vue-typed-js>
+    <h3 class="subtitle">
+      non-professional fullstack developer
     </h3>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       focusable="true"
       width="50px"
       height="50px"
       viewBox="0 0 24 24"
       class="arrow-down"
-      v-scroll-to="'.about'"
     >
       <path
         d="M5.843 9.593L11.5 15.25l5.657-5.657l-.707-.707l-4.95 4.95l-4.95-4.95l-.707.707z"
@@ -63,7 +55,7 @@ export default {
     text-align: center;
   }
 
-  h3 {
+  .subtitle {
     margin: 0;
     text-align: center;
     word-wrap: break-word;
