@@ -55,6 +55,8 @@
 </template>
 <script>
 import * as yup from 'yup';
+import { useToast } from "vue-toastification";
+
 import Item from './Item.vue';
 
 import githubLogo from '../../img/websites/github.png';
@@ -76,6 +78,11 @@ const schema = yup.object().shape({
 
 export default {
   name: 'Contact',
+  setup() {
+    const toast = useToast();
+
+    return { toast };
+  },
   components: {
     Item,
   },
@@ -127,6 +134,7 @@ export default {
   methods: {
     submitForm(e) {
       e.preventDefault();
+      const { toast } = this;
 
       this.loading = true;
 
@@ -145,9 +153,9 @@ export default {
             this.loading = false;
 
             if (res.status === 200) {
-              this.$toast.success('Successfully sent an email!');
+              toast.success('Successfully sent an email!');
             } else {
-              this.$toast.error("Couldn't send the email. Try again later");
+              toast.error("Couldn't send the email. Try again later");
             }
 
             form.reset();

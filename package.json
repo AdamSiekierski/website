@@ -15,7 +15,7 @@
     "vue": "^3.0.0-beta.1",
     "vue-router": "^4.0.0-beta.13",
     "vue-scrollto": "^2.19.1",
-    "vue-toastification": "^1.7.8",
+    "vue-toastification": "^2.0.0-beta.5",
     "vue-typed-js": "^0.1.2",
     "yup": "^0.29.3"
   },
