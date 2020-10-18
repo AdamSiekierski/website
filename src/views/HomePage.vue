@@ -60,7 +60,7 @@ export default {
   }
 }
 
-.fade-enter {
+.fade-enter-from {
   opacity: 0.5;
 
   .podcast-popup {

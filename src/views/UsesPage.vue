@@ -16,7 +16,7 @@
         MacBook Pro 13 2017 - fortunately no touchbar, Intel Core i5, 8GB RAM, 256SSD - My daily
         driver laptop
       </li>
-      <Li>LG 29-WK500 21:9 2560x1080px monitor</Li>
+      <li>LG 29-WK500 21:9 2560x1080px monitor</li>
       <li>CalDigit USB-C dock</li>
       <li>Apple Magic Keyboard + Apple Magic Mouse</li>
       <li>Griffin Elevator laptop stand</li>
