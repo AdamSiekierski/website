@@ -7,7 +7,7 @@
     />
     <h1>adam siekierski</h1>
     <h3 class="subtitle">
-      non-professional fullstack developer
+      {{ subtitle }}
     </h3>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@
       height="50px"
       viewBox="0 0 24 24"
       class="arrow-down"
+      @click="scrollToAbout"
     >
       <path
         d="M5.843 9.593L11.5 15.25l5.657-5.657l-.707-.707l-4.95 4.95l-4.95-4.95l-.707.707z"
@@ -26,8 +27,42 @@
   </section>
 </template>
 <script>
+import { reactive, ref } from 'vue';
+
 export default {
-  name: 'Landing',
+  setup() {
+    const subtitle = ref("");
+    const state = reactive({ subtitle });
+
+    function* subtitleGenerator() {
+      const text = "non-professional fullstack developer";
+
+      for (let i = 0; i < text.length; i++) {
+        yield text.slice(0, i + 1);
+      }
+    }
+
+    const generator = subtitleGenerator();
+
+    const interval = setInterval(() => {
+      const i = generator.next();
+
+      if (i.done) {
+        clearInterval(interval);
+      } else {
+        state.subtitle = i.value;
+      }
+    }, 70);
+
+    function scrollToAbout() {
+      document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    return {
+      scrollToAbout,
+      subtitle,
+    };
+  },
 };
 </script>
 <style lang="scss">
