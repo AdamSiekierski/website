@@ -11,7 +11,7 @@
 
 ### Made with:
 
-- Vue.js 3.0
+- Vue.js 3.0 https://vuejs.org/
 - Vue CLI https://cli.vuejs.org/
 - vue-router https://router.vuejs.org/
 - vue-typed-js https://github.com/Orlandster/vue-typed-js
