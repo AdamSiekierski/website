@@ -118,7 +118,7 @@
     </details>
     <details>
       <summary>Linux Setup</summary>
-      <p>I will post it later 😉</p>
+      <p>Available on my GitHub - <a href="https://github.com/AdamSiekierski/dotfiles-arch">dotfiles-arch</a></p>
     </details>
   </div>
 </template>
