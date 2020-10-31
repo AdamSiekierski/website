@@ -14,6 +14,8 @@
   </div>
 </template>
 <script>
+import { ref, onMounted } from 'vue';
+
 import PodcastPopup from '@/components/Podcast/Podcast.vue';
 import Landing from '@/components/Landing/Landing.vue';
 import About from '@/components/About/About.vue';
@@ -21,32 +23,31 @@ import Technologies from '@/components/Technologies/Technologies.vue';
 import Contact from '@/components/Contact/Contact.vue';
 
 export default {
-  name: 'Home',
+  setup() {
+    const isPopupOpen = ref(false);
+
+    onMounted(() => {
+      if (!localStorage.getItem('podcast-popup-closed')) {
+        isPopupOpen.value = true;
+      }
+    });
+
+    function closePopup(notShow) {
+      isPopupOpen.value = false;
+
+      if (notShow) {
+        localStorage.setItem('podcast-popup-closed', notShow);
+      }
+    }
+
+    return { isPopupOpen, closePopup };
+  },
   components: {
     PodcastPopup,
     Landing,
     About,
     Technologies,
     Contact,
-  },
-  data() {
-    return {
-      isPopupOpen: false,
-    };
-  },
-  mounted() {
-    if (!localStorage.getItem('podcast-popup-closed')) {
-      this.isPopupOpen = true;
-    }
-  },
-  methods: {
-    closePopup(notShow) {
-      this.isPopupOpen = false;
-
-      if (notShow) {
-        localStorage.setItem('podcast-popup-closed', notShow);
-      }
-    },
   },
 };
 </script>

@@ -4,21 +4,22 @@
   </a>
 </template>
 <script>
+import { computed } from 'vue';
+
 export default {
-  name: 'Item',
+  setup() {
+    const styles = computed(() => ({
+      '--bg-color': this.site.bgColor,
+    }));
+
+    return styles;
+  },
   props: {
     site: {
       icon: String,
       link: String,
       name: String,
       bgColor: String,
-    },
-  },
-  computed: {
-    styles() {
-      return {
-        '--bg-color': this.site.bgColor,
-      };
     },
   },
 };

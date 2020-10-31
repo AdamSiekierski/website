@@ -21,11 +21,6 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: 'PodcastPopup',
-};
-</script>
 <style lang="scss">
 .podcast-popup-wrapper {
   width: 100%;

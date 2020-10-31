@@ -13,21 +13,17 @@
   </div>
 </template>
 <script>
-import Tag from "./Tag.vue";
+import Tag from './Tag.vue';
 
 export default {
-  name: "Projects",
+  setup() {
+    return { Tag };
+  },
   props: {
     name: String,
     description: String,
     url: String,
     tags: Array,
-  },
-  data() {
-    return { stars: 0 };
-  },
-  components: {
-    Tag,
   },
 };
 </script>

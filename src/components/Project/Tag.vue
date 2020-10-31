@@ -1,9 +1,8 @@
 <template>
-  <div class="project-tag" :style="{ 'background-color': color, 'color': fg }">{{ name }}</div>
+  <div class="project-tag" :style="{ 'background-color': color, color: fg }">{{ name }}</div>
 </template>
 <script>
 export default {
-  name: "Tag",
   props: {
     color: String,
     name: String,

@@ -32,12 +32,15 @@
   </section>
 </template>
 <script>
+import { useAge } from '../../hooks/useAge';
+
 export default {
-  name: 'About',
-  computed: {
-    age() {
-      return new Date().getFullYear() - 2004;
-    },
+  setup() {
+    const age = useAge(2004);
+
+    return {
+      age,
+    };
   },
 };
 </script>

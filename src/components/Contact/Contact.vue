@@ -55,7 +55,8 @@
 </template>
 <script>
 import * as yup from 'yup';
-import { useToast } from "vue-toastification";
+import { useToast } from 'vue-toastification';
+import { reactive, ref } from 'vue';
 
 import Item from './Item.vue';
 
@@ -64,6 +65,39 @@ import twitterLogo from '../../img/websites/twitter.svg';
 import instagramLogo from '../../img/websites/instagram.svg';
 import linkedinLogo from '../../img/websites/linkedin.svg';
 import redditLogo from '../../img/websites/reddit.svg';
+
+const sites = [
+  {
+    name: 'GitHub',
+    link: 'https://github.com/AdamSiekierski',
+    icon: githubLogo,
+    bgColor: '#24292E',
+  },
+  {
+    name: 'Instagram',
+    link: 'https://instagram.com/a.siekierski',
+    icon: instagramLogo,
+    bgColor: 'linear-gradient(45deg, #EB001E, #6100BF)',
+  },
+  {
+    name: 'Twitter',
+    link: 'https://twitter.com/a_siekierski',
+    icon: twitterLogo,
+    bgColor: '#1DA1F2',
+  },
+  {
+    name: 'Linkedin',
+    link: 'https://www.linkedin.com/in/adam-siekierski-b6b7401b2/',
+    icon: linkedinLogo,
+    bgColor: '#0077B5',
+  },
+  {
+    name: 'Reddit',
+    link: 'https://www.reddit.com/user/adamsiekierski',
+    icon: redditLogo,
+    bgColor: '#FF4500',
+  },
+];
 
 const schema = yup.object().shape({
   email: yup
@@ -77,68 +111,31 @@ const schema = yup.object().shape({
 });
 
 export default {
-  name: 'Contact',
   setup() {
     const toast = useToast();
 
-    return { toast };
-  },
-  components: {
-    Item,
-  },
-  data() {
-    return {
+    const email = reactive({
       email: {
         value: '',
         error: false,
       },
+    });
+
+    const message = reactive({
       message: {
         value: '',
         error: false,
       },
-      loading: false,
-      sites: [
-        {
-          name: 'GitHub',
-          link: 'https://github.com/AdamSiekierski',
-          icon: githubLogo,
-          bgColor: '#24292E',
-        },
-        {
-          name: 'Instagram',
-          link: 'https://instagram.com/a.siekierski',
-          icon: instagramLogo,
-          bgColor: 'linear-gradient(45deg, #EB001E, #6100BF)',
-        },
-        {
-          name: 'Twitter',
-          link: 'https://twitter.com/a_siekierski',
-          icon: twitterLogo,
-          bgColor: '#1DA1F2',
-        },
-        {
-          name: 'Linkedin',
-          link: 'https://www.linkedin.com/in/adam-siekierski-b6b7401b2/',
-          icon: linkedinLogo,
-          bgColor: '#0077B5',
-        },
-        {
-          name: 'Reddit',
-          link: 'https://www.reddit.com/user/adamsiekierski',
-          icon: redditLogo,
-          bgColor: '#FF4500',
-        },
-      ],
-    };
-  },
-  methods: {
-    submitForm(e) {
+    });
+
+    const loading = ref(false);
+
+    function submitForm(e) {
       e.preventDefault();
-      const { toast } = this;
 
-      this.loading = true;
+      loading.value = true;
 
-      schema.isValid({ email: this.email.value, message: this.message.value }).then((isValid) => {
+      schema.isValid({ email: email.value, message: message.value }).then((isValid) => {
         if (isValid) {
           const form = e.target;
           const data = new FormData(form);
@@ -150,7 +147,7 @@ export default {
               Accept: 'application/json',
             },
           }).then((res) => {
-            this.loading = false;
+            loading.value = false;
 
             if (res.status === 200) {
               toast.success('Successfully sent an email!');
@@ -159,27 +156,35 @@ export default {
             }
 
             form.reset();
-            this.email = { value: '', error: false };
-            this.message = { value: '', error: false };
+            email.value = '';
+            email.error = false;
+            message.value = '';
+            message.error = false;
           });
         }
       });
-    },
-    checkForm() {
-      this.email.error = false;
-      this.message.error = false;
+    }
 
-      if (this.email.value || this.message.value) {
+    function checkForm() {
+      email.error = false;
+      message.error = false;
+
+      if (email.value || message.value) {
         schema
-          .validate({ email: this.email.value, message: this.message.value }, { abortEarly: false })
+          .validate({ email: email.value, message: message.value }, { abortEarly: false })
           .catch((errors) => {
             errors.inner.map((error) => {
-              if (error.path === 'email') this.email.error = true;
-              if (error.path === 'message') this.message.error = true;
+              if (error.path === 'email') email.error = true;
+              if (error.path === 'message') message.error = true;
             });
           });
       }
-    },
+    }
+
+    return { email, message, loading, sites, submitForm, checkForm };
+  },
+  components: {
+    Item,
   },
 };
 </script>
