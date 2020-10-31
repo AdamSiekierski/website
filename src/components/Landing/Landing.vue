@@ -1,13 +1,9 @@
 <template>
   <section class="landing">
-    <img
-      src="@/img/avatar.jpg"
-      class="avatar"
-      alt="Adam Siekierski"
-    />
+    <img src="@/img/avatar.jpg" class="avatar" alt="Adam Siekierski" />
     <h1>adam siekierski</h1>
     <h3 class="subtitle">
-      {{ subtitle }}
+      {{ state.subtitle }}
     </h3>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -27,20 +23,23 @@
   </section>
 </template>
 <script>
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
+
+function* subtitleGenerator() {
+  const text = 'non-professional fullstack developer';
+
+  for (let i = 0; i < text.length; i++) {
+    yield text.slice(0, i + 1);
+  }
+}
+
+function scrollToAbout() {
+  document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+}
 
 export default {
   setup() {
-    const subtitle = ref("");
-    const state = reactive({ subtitle });
-
-    function* subtitleGenerator() {
-      const text = "non-professional fullstack developer";
-
-      for (let i = 0; i < text.length; i++) {
-        yield text.slice(0, i + 1);
-      }
-    }
+    const state = reactive({ subtitle: '' });
 
     const generator = subtitleGenerator();
 
@@ -54,13 +53,9 @@ export default {
       }
     }, 70);
 
-    function scrollToAbout() {
-      document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-    }
-
     return {
       scrollToAbout,
-      subtitle,
+      state,
     };
   },
 };

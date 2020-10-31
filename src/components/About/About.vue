@@ -12,7 +12,8 @@
         learning Go. Check out <router-link to="/projects">projects</router-link> for some of my
         projects and contributions. Also go and see my
         <a href="https://blog.siekierski.ml">blog</a> - maybe one day I will start posting more
-        often.
+        often. All my current projects and work are available on my
+        <a href="https://github.com/AdamSiekierski">GitHub</a> - I open source all my work.
       </p>
       <p>
         If you want to take a look at stuff I use at everyday basis, I recommend looking at
@@ -31,12 +32,15 @@
   </section>
 </template>
 <script>
+import { useAge } from '../../hooks/useAge';
+
 export default {
-  name: 'About',
-  computed: {
-    age() {
-      return new Date().getFullYear() - 2004;
-    },
+  setup() {
+    const age = useAge(2004);
+
+    return {
+      age,
+    };
   },
 };
 </script>

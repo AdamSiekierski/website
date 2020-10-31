@@ -6,9 +6,18 @@
 </template>
 <script>
 import { hoverBg } from '@/utils/hoverBg';
+import { computed } from 'vue';
 
 export default {
-  name: 'Item',
+  setup(props) {
+    const styles = computed(() => ({
+      '--bg-color': props.technology.bgColor,
+      '--bg-color-hover': hoverBg(props.technology.bgColor),
+      '--fg-color': props.technology.fgColor,
+    }));
+
+    return { styles };
+  },
   props: {
     technology: {
       name: String,
@@ -16,15 +25,6 @@ export default {
       bgColor: String,
       fgColor: String,
       website: String,
-    },
-  },
-  computed: {
-    styles() {
-      return {
-        '--bg-color': this.technology.bgColor,
-        '--bg-color-hover': hoverBg(this.technology.bgColor),
-        '--fg-color': this.technology.fgColor,
-      };
     },
   },
 };
