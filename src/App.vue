@@ -1,10 +1,19 @@
 <template>
-  <div class="theme--dark">
+  <div :class="`theme--${theme}`">
     <div class="app">
       <nav class="nav">
-        <router-link to="/" active-class="--active">home</router-link>
-        <router-link to="/projects">projects</router-link>
-        <router-link to="/uses">uses</router-link>
+        <button class="theme-button" @click="toggleTheme">
+          <img
+            :src="theme === 'dark' ? light : dark"
+            alt="theme toggle icon"
+            class="theme-button-image"
+          />
+        </button>
+        <div>
+          <router-link to="/" active-class="--active">home</router-link>
+          <router-link to="/projects">projects</router-link>
+          <router-link to="/uses">uses</router-link>
+        </div>
       </nav>
       <router-view />
       <footer class="footer">
@@ -13,6 +22,34 @@
     </div>
   </div>
 </template>
+<script>
+import { ref } from 'vue';
+import light from './img/icons/day.svg';
+import dark from './img/icons/night.svg';
+
+export default {
+  setup() {
+    const theme = ref('dark');
+
+    if (localStorage.getItem('theme') === 'light') {
+      theme.value = 'light';
+    }
+
+    function toggleTheme() {
+      const newTheme = theme.value === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      theme.value = newTheme;
+    }
+
+    return {
+      theme,
+      toggleTheme,
+      light,
+      dark,
+    };
+  },
+};
+</script>
 <style lang="scss">
 @use './styles/mixins.scss' as mixins;
 
@@ -30,7 +67,7 @@ html {
   }
 
   ::-webkit-scrollbar-track {
-    background: black;
+    background: #111;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -64,7 +101,21 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  .theme-button {
+    background: none;
+    outline: none;
+    appearance: none;
+    border: none;
+    font-size: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &-image {
+      height: 100%;
+    }
+  }
 
   @include mixins.themed() using ($theme) {
     a {
