@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+@mixin themed() {
+  @each $name, $theme in $themes {
+    .theme--#{$name} & {
+      // prettier-ignore
+      @content($theme);
+    }
+  }
+}

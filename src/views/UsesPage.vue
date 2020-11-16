@@ -14,7 +14,7 @@
     <ul>
       <li>
         MacBook Pro 13 2017 - fortunately no touchbar, Intel Core i5, 8GB RAM, 256SSD - My daily
-        driver laptop
+        laptop
       </li>
       <li>LG 29-WK500 21:9 2560x1080px monitor</li>
       <li>CalDigit USB-C dock</li>
@@ -72,8 +72,6 @@
     <ul>
       <li>iPhone XR 64GB (PRODUCT)<sup>RED</sup></li>
       <li>Cube Reaction GTC 2x 2017 29er Bike</li>
-      <li>Head Daymaker 2019 Snowboard</li>
-      <li>Salomon Authentic LTR GTX Trekking shoes</li>
     </ul>
     <h2 id="setup">#setup</h2>
     <details>
@@ -118,25 +116,19 @@
     </details>
     <details>
       <summary>Linux Setup</summary>
-      <p>Available on my GitHub - <a href="https://github.com/AdamSiekierski/dotfiles-arch">dotfiles-arch</a></p>
+      <p>
+        Available on my GitHub -
+        <a href="https://github.com/AdamSiekierski/dotfiles-arch">dotfiles-arch</a>
+      </p>
     </details>
   </div>
 </template>
 <style lang="scss" scoped>
 .wrapper {
-  color: white;
   padding: 50px 25px;
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;
-}
-
-a {
-  color: white;
-
-  &:hover {
-    color: #dddddd;
-  }
 }
 
 img {

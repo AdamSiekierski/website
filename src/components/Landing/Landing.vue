@@ -16,7 +16,6 @@
     >
       <path
         d="M5.843 9.593L11.5 15.25l5.657-5.657l-.707-.707l-4.95 4.95l-4.95-4.95l-.707.707z"
-        fill="#ffffff"
         transform="translate(-11 -11) scale(2)"
       />
     </svg>
@@ -28,7 +27,7 @@ import { reactive } from 'vue';
 function* subtitleGenerator() {
   const text = 'non-professional fullstack developer';
 
-  for (let i = 0; i < text.length; i++) {
+  for (let i = 0; i < text.length; i += 1) {
     yield text.slice(0, i + 1);
   }
 }
@@ -61,12 +60,13 @@ export default {
 };
 </script>
 <style lang="scss">
+@use '../../styles/mixins.scss' as mixins;
+
 .landing {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: white;
   height: 100vh;
   width: 100%;
   padding: 10px;
@@ -96,6 +96,12 @@ export default {
     opacity: 1;
     cursor: pointer;
     margin-top: 1em;
+
+    & > path {
+      @include mixins.themed() using ($theme) {
+        fill: map-get($theme, 'fg');
+      }
+    }
 
     &:hover {
       opacity: 0.8;
