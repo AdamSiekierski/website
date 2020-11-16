@@ -25,20 +25,33 @@ export default {
 };
 </script>
 <style lang="scss">
+@use '../../styles/mixins.scss' as mixins;
+
 .contact-find-item {
   display: block;
   padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
 
-  img {
-    width: 100%;
-  }
+  @include mixins.themed() using ($theme) {
+    background: map-get($theme, 'bg');
 
-  &:hover {
-    background: var(--bg-color);
+    &:hover {
+      background: var(--bg-color);
+
+      img {
+        filter: none;
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @if map-get($theme, 'name') == 'light' {
+        filter: invert(1);
+      }
+    }
   }
 }
 </style>

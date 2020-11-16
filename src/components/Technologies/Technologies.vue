@@ -50,7 +50,7 @@ const technologies = [
   {
     name: 'Next.js',
     logo: nextjsLogo,
-    bgColor: '#ffffff',
+    bgColor: '#eeeeee',
     fgColor: '#000000',
     website: 'https://nextjs.org',
   },
@@ -99,7 +99,7 @@ const technologies = [
   {
     name: 'Deno',
     logo: denoLogo,
-    bgColor: '#ffffff',
+    bgColor: '#eeeeee',
     fgColor: '#000000',
     website: 'https://deno.land',
   },
@@ -125,8 +125,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .technologies {
-  color: white;
-
   &-content {
     max-width: 800px;
     margin: 0 auto;

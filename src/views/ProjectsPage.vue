@@ -101,18 +101,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@use '../styles/mixins.scss' as mixins;
+
 .wrapper {
-  color: white;
   padding: 50px 25px;
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;
 
   a {
-    color: white;
-
-    &:hover {
-      color: #ddd;
+    @include mixins.themed() using ($theme) {
+      color: map-get($theme, 'fg');
     }
   }
 }

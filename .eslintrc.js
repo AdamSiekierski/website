@@ -12,6 +12,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'global-require': 'off',
     'import/prefer-default-export': 'off',
+    'array-callback-return': 'off',
   },
 
   parserOptions: {

@@ -19,7 +19,7 @@
               <input
                 type="text"
                 name="_replyto"
-                :class="email.error && '--error'"
+                :class="email.error ? '--error' : ''"
                 v-model="email.value"
                 @input="checkForm"
               />
@@ -29,7 +29,7 @@
               <textarea
                 name="message"
                 rows="4"
-                :class="message.error && '--error'"
+                :class="email.error ? '--error' : ''"
                 v-model="message.value"
                 @input="checkForm"
               ></textarea>
@@ -37,7 +37,7 @@
             <button
               type="submit"
               :disabled="message.error || email.error || !email.value || !message.value || loading"
-              :class="(message.error || email.error) && '--error'"
+              :class="message.error || email.error ? '--error' : ''"
             >
               Send
             </button>
@@ -189,107 +189,107 @@ export default {
 };
 </script>
 <style lang="scss">
+@use "../../styles/mixins.scss" as mixins;
+
 .contact {
-  color: white;
-
-  &-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px 25px;
-  }
-
-  &-split {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 50px;
-  }
-
-  a {
-    color: white;
-
-    &:hover {
-      color: #ddd;
-    }
-  }
-
-  &-form {
-    input,
-    textarea {
-      -webkit-appearance: none;
-      border-radius: 0;
-      display: block;
-      font-family: inherit;
-      padding: 5px 0;
-      font-size: 1em;
-      width: 100%;
-      background: transparent;
-      color: white;
-      outline: none;
-      border: none;
-      border-bottom: 3px solid white;
-      resize: none;
-
-      transition: border-bottom 0.5s ease;
-
-      &.--error {
-        border-bottom-color: red;
-      }
+  @include mixins.themed() using ($theme) {
+    &-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 25px;
     }
 
-    button {
-      display: inline-block;
-      font-family: inherit;
-      padding: 5px;
-      font-size: 1em;
-      background: transparent;
-      color: white;
-      outline: none;
-      border: none;
-      border-bottom: 3px solid white;
-      cursor: pointer;
+    &-split {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 50px;
+    }
 
-      transition: color 0.3s ease, background-color 0.3s ease, border-bottom 0.5s ease;
+    a {
+      color: map-get($theme, 'fg');
+    }
 
-      &:hover {
-        background-color: white;
-        color: black;
-      }
+    &-form {
+      input,
+      textarea {
+        -webkit-appearance: none;
+        border-radius: 0;
+        display: block;
+        font-family: inherit;
+        padding: 5px 0;
+        font-size: 1em;
+        width: 100%;
+        background: transparent;
+        color: map-get($theme, 'fg');
+        outline: none;
+        border: none;
+        border-bottom: 3px solid map-get($theme, 'fg');
+        resize: none;
 
-      &:disabled {
-        cursor: not-allowed;
-        color: white;
+        transition: border-bottom 0.5s ease;
 
-        &:hover {
-          background-color: transparent;
-          color: white;
+        &.--error {
+          border-bottom: 3px solid red;
         }
       }
 
-      &.--error {
-        border-bottom-color: red;
+      button {
+        display: inline-block;
+        font-family: inherit;
+        padding: 5px;
+        font-size: 1em;
+        background: transparent;
+        color: map-get($theme, 'fg');
+        outline: none;
+        border: none;
+        border-bottom: 3px solid map-get($theme, 'fg');
+        cursor: pointer;
+
+        transition: color 0.3s ease, background-color 0.3s ease, border-bottom 0.5s ease;
+
+        &:hover {
+          background-color: map-get($theme, 'fg');
+          color: map-get($theme, 'bg');
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          color: map-get($theme, 'fg');
+
+          &:hover {
+            background-color: transparent;
+            color: map-get($theme, 'fg');
+          }
+        }
+
+        &.--error {
+          border-bottom-color: red;
+        }
+      }
+
+      label {
+        display: block;
+        margin: 1em 0;
       }
     }
 
-    label {
-      display: block;
-      margin: 1em 0;
+    &-find {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
     }
-  }
-
-  &-find {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   }
 }
 
 .Vue-Toastification__toast {
-  border-radius: 0;
-  background-color: white;
-  color: black;
-  font-family: inherit;
+  @include mixins.themed() using ($theme) {
+    border-radius: 0;
+    background-color: map-get($theme, 'fg');
+    color: map-get($theme, 'bg');
+    font-family: inherit;
 
-  @media screen and (max-width: 600px) {
-    margin-bottom: 0;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 0;
+    }
   }
 }
 

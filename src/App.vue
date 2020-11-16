@@ -1,5 +1,5 @@
 <template>
-  <div class="theme--light">
+  <div class="theme--dark">
     <div class="app">
       <nav class="nav">
         <router-link to="/" active-class="--active">home</router-link>
@@ -24,6 +24,22 @@
 
 html {
   scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.3;
+  }
 }
 
 body {
@@ -37,10 +53,6 @@ body {
   @include mixins.themed() using ($theme) {
     background-color: map-get($theme, 'bg');
     color: map-get($theme, 'fg');
-
-    a {
-      color: map-get($theme, 'fg');
-    }
   }
 }
 
@@ -54,13 +66,14 @@ body {
   flex-direction: row;
   justify-content: flex-end;
 
-  a {
-    margin: 0 5px;
-    text-decoration: none;
-  }
+  @include mixins.themed() using ($theme) {
+    a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: map-get($theme, 'fg');
+    }
 
-  .router-link-exact-active {
-    @include mixins.themed() using ($theme) {
+    .router-link-exact-active {
       border-bottom: 1px solid map-get($theme, 'fg');
     }
   }
@@ -74,23 +87,9 @@ body {
 }
 
 ::selection {
-  background: white;
-  color: black;
-}
-
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  @include mixins.themed() using ($theme) {
+    background: map-get($theme, 'fg');
+    color: map-get($theme, 'bg');
+  }
 }
 </style>

@@ -45,9 +45,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.about {
-  color: white;
+@use '../../styles/mixins.scss';
 
+.about {
   &-content {
     max-width: 800px;
     margin: 0 auto;
@@ -56,10 +56,8 @@ export default {
   }
 
   a {
-    color: white;
-
-    &:hover {
-      color: #ddd;
+    @include mixins.themed() using ($theme) {
+      color: map-get($theme, 'fg');
     }
   }
 }

@@ -1,10 +1,12 @@
 $themes: (
   dark: (
     bg: black,
-    fg: white,
+    fg: #eeeeee,
+    name: 'dark',
   ),
   light: (
     bg: white,
     fg: black,
+    name: 'light',
   ),
 );

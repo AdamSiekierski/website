@@ -28,9 +28,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@use "../../styles/mixins.scss" as mixins;
+
 .projects-item {
   margin: 15px 0;
-  border: 4px solid white;
   padding: 20px;
   position: relative;
 
@@ -45,6 +46,10 @@ export default {
     &:hover {
       opacity: 0.7;
     }
+  }
+
+  @include mixins.themed() using ($theme) {
+    border: 4px solid map-get($theme, 'fg');
   }
 }
 </style>

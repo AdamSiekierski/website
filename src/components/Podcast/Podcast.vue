@@ -10,7 +10,9 @@
           development!
         </p>
         <p>
-          <a href="https://require.podcast.gq">https://require.podcast.gq</a>
+          <a href="https://require.podcast.gq" class="podcast-popup-link"
+            >https://require.podcast.gq</a
+          >
         </p>
       </div>
       <div class="podcast-popup-footer">
@@ -44,7 +46,7 @@
   padding: 20px;
   text-align: center;
 
-  a {
+  .podcast-popup-link {
     color: #ff5370;
   }
 }
