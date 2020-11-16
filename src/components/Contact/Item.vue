@@ -7,12 +7,12 @@
 import { computed } from 'vue';
 
 export default {
-  setup() {
+  setup(props) {
     const styles = computed(() => ({
-      '--bg-color': this.site.bgColor,
+      '--bg-color': props.site.bgColor,
     }));
 
-    return styles;
+    return { styles };
   },
   props: {
     site: {
