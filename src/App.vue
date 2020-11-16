@@ -97,6 +97,8 @@ body {
     font-size: inherit;
     vertical-align: middle;
     cursor: pointer;
+    padding: 0;
+    margin: 0;
 
     &-image {
       height: 100%;
