@@ -1,17 +1,58 @@
 <template>
-  <div class="app">
-    <nav class="nav">
-      <router-link to="/" active-class="--active">home</router-link>
-      <router-link to="/projects">projects</router-link>
-      <router-link to="/uses">uses</router-link>
-    </nav>
-    <router-view />
-    <footer class="footer">
-      the end. copyright {{ new Date().getFullYear() }} &copy; adam siekierski.
-    </footer>
+  <div :class="`theme--${theme}`">
+    <div class="app">
+      <nav class="nav">
+        <button class="theme-button" @click="toggleTheme">
+          <img
+            :src="theme === 'dark' ? light : dark"
+            alt="theme toggle icon"
+            class="theme-button-image"
+          />
+        </button>
+        <div>
+          <router-link to="/" active-class="--active">home</router-link>
+          <router-link to="/projects">projects</router-link>
+          <router-link to="/uses">uses</router-link>
+        </div>
+      </nav>
+      <router-view />
+      <footer class="footer">
+        the end. copyright {{ new Date().getFullYear() }} &copy; adam siekierski.
+      </footer>
+    </div>
   </div>
 </template>
+<script>
+import { ref } from 'vue';
+import light from './img/icons/day.svg';
+import dark from './img/icons/night.svg';
+
+export default {
+  setup() {
+    const theme = ref('dark');
+
+    if (localStorage.getItem('theme') === 'light') {
+      theme.value = 'light';
+    }
+
+    function toggleTheme() {
+      const newTheme = theme.value === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      theme.value = newTheme;
+    }
+
+    return {
+      theme,
+      toggleTheme,
+      light,
+      dark,
+    };
+  },
+};
+</script>
 <style lang="scss">
+@use './styles/mixins.scss' as mixins;
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
 
 * {
@@ -20,16 +61,36 @@
 
 html {
   scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.3;
+  }
 }
 
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  background-color: #000000;
+  background-color: black;
 }
 
 .app {
   overflow: hidden;
+  @include mixins.themed() using ($theme) {
+    background-color: map-get($theme, 'bg');
+    color: map-get($theme, 'fg');
+  }
 }
 
 .nav {
@@ -40,28 +101,36 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  mix-blend-mode: difference;
+  justify-content: space-between;
 
-  a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
+  .theme-button {
+    background: none;
+    outline: none;
+    appearance: none;
+    border: none;
+    font-size: inherit;
+    vertical-align: middle;
+    cursor: pointer;
 
-    &:hover {
-      color: #bbb;
-      border-color: #bbb;
+    &-image {
+      height: 100%;
     }
   }
 
-  .router-link-exact-active {
-    border-bottom: 1px solid white;
+  @include mixins.themed() using ($theme) {
+    a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: map-get($theme, 'fg');
+    }
+
+    .router-link-exact-active {
+      border-bottom: 1px solid map-get($theme, 'fg');
+    }
   }
 }
 
 .footer {
-  background-color: black;
-  color: white;
   text-align: center;
   width: 100%;
   padding: 3px;
@@ -69,23 +138,9 @@ body {
 }
 
 ::selection {
-  background: white;
-  color: black;
-}
-
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  @include mixins.themed() using ($theme) {
+    background: map-get($theme, 'fg');
+    color: map-get($theme, 'bg');
+  }
 }
 </style>

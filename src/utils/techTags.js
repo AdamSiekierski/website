@@ -59,30 +59,30 @@ export const go = {
 
 export const cli = {
   name: 'CLI',
-  color: '#ffffff',
+  color: '#eeeeee',
   fg: '#000000',
 };
 
 export const frontend = {
   name: 'Frontend',
-  color: '#ffffff',
+  color: '#eeeeee',
   fg: '#000000',
 };
 
 export const backend = {
   name: 'Backend',
-  color: '#ffffff',
+  color: '#eeeeee',
   fg: '#000000',
 };
 
 export const app = {
   name: 'App',
-  color: '#ffffff',
+  color: '#eeeeee',
   fg: '#000000',
 };
 
 export const pkg = {
   name: 'Package',
-  color: '#ffffff',
+  color: '#eeeeee',
   fg: '#000000',
 };
