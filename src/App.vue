@@ -37,7 +37,9 @@ export default {
 
     function toggleTheme() {
       const newTheme = theme.value === 'dark' ? 'light' : 'dark';
+
       localStorage.setItem('theme', newTheme);
+
       theme.value = newTheme;
     }
 
@@ -61,22 +63,6 @@ export default {
 
 html {
   scroll-behavior: smooth;
-
-  ::-webkit-scrollbar {
-    width: 15px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #111;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #eee;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    opacity: 0.3;
-  }
 }
 
 body {
