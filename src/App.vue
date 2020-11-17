@@ -1,29 +1,27 @@
 <template>
-  <div :class="`theme--${theme}`">
-    <div class="app">
-      <nav class="nav">
-        <button class="theme-button" @click="toggleTheme">
-          <img
-            :src="theme === 'dark' ? light : dark"
-            alt="theme toggle icon"
-            class="theme-button-image"
-          />
-        </button>
-        <div>
-          <router-link to="/" active-class="--active">home</router-link>
-          <router-link to="/projects">projects</router-link>
-          <router-link to="/uses">uses</router-link>
-        </div>
-      </nav>
-      <router-view />
-      <footer class="footer">
-        the end. copyright {{ new Date().getFullYear() }} &copy; adam siekierski.
-      </footer>
-    </div>
+  <div class="app">
+    <nav class="nav">
+      <button class="theme-button" @click="toggleTheme">
+        <img
+          :src="theme === 'dark' ? light : dark"
+          alt="theme toggle icon"
+          class="theme-button-image"
+        />
+      </button>
+      <div>
+        <router-link to="/" active-class="--active">home</router-link>
+        <router-link to="/projects">projects</router-link>
+        <router-link to="/uses">uses</router-link>
+      </div>
+    </nav>
+    <router-view />
+    <footer class="footer">
+      the end. copyright {{ new Date().getFullYear() }} &copy; adam siekierski.
+    </footer>
   </div>
 </template>
 <script>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import light from './img/icons/day.svg';
 import dark from './img/icons/night.svg';
 
@@ -39,9 +37,16 @@ export default {
       const newTheme = theme.value === 'dark' ? 'light' : 'dark';
 
       localStorage.setItem('theme', newTheme);
-
       theme.value = newTheme;
     }
+
+    watch(
+      theme,
+      (val) => {
+        document.documentElement.setAttribute('data-theme', val);
+      },
+      { immediate: true },
+    );
 
     return {
       theme,

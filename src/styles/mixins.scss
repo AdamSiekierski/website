@@ -2,7 +2,7 @@
 
 @mixin themed() {
   @each $name, $theme in $themes {
-    .theme--#{$name} & {
+    html[data-theme='#{$name}'] & {
       // prettier-ignore
       @content($theme);
     }
