@@ -1,11 +1,6 @@
 <template>
   <div class="app">
     <nav class="nav">
-      <div>
-        <router-link to="/" active-class="--active">home</router-link>
-        <router-link to="/projects">projects</router-link>
-        <router-link to="/uses">uses</router-link>
-      </div>
       <button class="theme-button" @click="toggleTheme">
         <img
           :src="theme === 'dark' ? light : dark"
@@ -13,6 +8,11 @@
           class="theme-button-image"
         />
       </button>
+      <div>
+        <router-link to="/" active-class="--active">home</router-link>
+        <router-link to="/projects">projects</router-link>
+        <router-link to="/uses">uses</router-link>
+      </div>
     </nav>
     <router-view />
     <footer class="footer">
@@ -92,7 +92,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   .theme-button {
     background: none;
