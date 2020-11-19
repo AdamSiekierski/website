@@ -29,7 +29,7 @@
               <textarea
                 name="message"
                 rows="4"
-                :class="email.error ? '--error' : ''"
+                :class="message.error ? '--error' : ''"
                 v-model="message.value"
                 @input="checkForm"
               ></textarea>

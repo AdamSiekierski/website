@@ -1,6 +1,11 @@
 <template>
   <div class="app">
     <nav class="nav">
+      <div>
+        <router-link to="/" active-class="--active">home</router-link>
+        <router-link to="/projects">projects</router-link>
+        <router-link to="/uses">uses</router-link>
+      </div>
       <button class="theme-button" @click="toggleTheme">
         <img
           :src="theme === 'dark' ? light : dark"
@@ -8,11 +13,6 @@
           class="theme-button-image"
         />
       </button>
-      <div>
-        <router-link to="/" active-class="--active">home</router-link>
-        <router-link to="/projects">projects</router-link>
-        <router-link to="/uses">uses</router-link>
-      </div>
     </nav>
     <router-view />
     <footer class="footer">
@@ -92,7 +92,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   .theme-button {
     background: none;
@@ -100,13 +100,14 @@ body {
     appearance: none;
     border: none;
     font-size: inherit;
-    vertical-align: middle;
     cursor: pointer;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 10px;
 
     &-image {
-      height: 100%;
+      height: 1em;
+      vertical-align: middle;
+      transform: scale(1.2);
     }
   }
 
