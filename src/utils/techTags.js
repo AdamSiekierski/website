@@ -86,3 +86,9 @@ export const pkg = {
   color: '#eeeeee',
   fg: '#000000',
 };
+
+export const nextjs = {
+  name: 'Next.js',
+  color: '#333333',
+  fg: '#ffffff',
+};

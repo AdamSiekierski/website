@@ -25,7 +25,7 @@
 import { reactive } from 'vue';
 
 function* subtitleGenerator() {
-  const text = 'non-professional fullstack developer';
+  const text = 'young hobbyist web developer';
 
   for (let i = 0; i < text.length; i += 1) {
     yield text.slice(0, i + 1);

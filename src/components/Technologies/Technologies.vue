@@ -27,18 +27,18 @@ import firebaseLogo from '../../img/technologies/firebase.svg';
 
 const technologies = [
   {
-    name: 'TypeScript',
-    logo: tsLogo,
-    bgColor: '#007acc',
-    fgColor: '#ffffff',
-    website: 'https://www.typescriptlang.org',
-  },
-  {
     name: 'JavaScript',
     logo: jsLogo,
     bgColor: '#f7df1e',
     fgColor: '#000000',
     website: 'https://developer.mozilla.org/en-US/docs/Web',
+  },
+  {
+    name: 'TypeScript',
+    logo: tsLogo,
+    bgColor: '#007acc',
+    fgColor: '#ffffff',
+    website: 'https://www.typescriptlang.org',
   },
   {
     name: 'React',
@@ -55,11 +55,11 @@ const technologies = [
     website: 'https://nextjs.org',
   },
   {
-    name: 'React Native',
-    logo: reactLogo,
-    bgColor: '#53C1DE',
-    fgColor: '#000000',
-    website: 'https://reactnative.dev',
+    name: 'Swift',
+    logo: swiftLogo,
+    bgColor: '#f57929',
+    fgColor: '#ffffff',
+    website: 'https://swift.org/',
   },
   {
     name: 'GraphQL',
@@ -69,18 +69,18 @@ const technologies = [
     website: 'https://graphql.org',
   },
   {
-    name: 'Gatsby',
-    logo: gatsbyLogo,
-    bgColor: '#663399',
-    fgColor: '#ffffff',
-    website: 'https://gatsbyjs.org',
-  },
-  {
     name: 'Node.js',
     logo: nodejsLogo,
     bgColor: '#539E43',
     fgColor: '#ffffff',
     website: 'https://nodejs.org',
+  },
+  {
+    name: 'Gatsby',
+    logo: gatsbyLogo,
+    bgColor: '#663399',
+    fgColor: '#ffffff',
+    website: 'https://gatsbyjs.org',
   },
   {
     name: 'Vue.js',
@@ -90,11 +90,11 @@ const technologies = [
     website: 'https://vuejs.org',
   },
   {
-    name: 'Swift',
-    logo: swiftLogo,
-    bgColor: '#f57929',
-    fgColor: '#ffffff',
-    website: 'https://swift.org/',
+    name: 'React Native',
+    logo: reactLogo,
+    bgColor: '#53C1DE',
+    fgColor: '#000000',
+    website: 'https://reactnative.dev',
   },
   {
     name: 'Deno',
