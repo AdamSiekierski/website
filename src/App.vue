@@ -73,7 +73,10 @@ html {
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  background-color: black;
+
+  @include mixins.themed() using ($theme) {
+    background-color: map-get($theme, 'bg');
+  }
 }
 
 .app {
