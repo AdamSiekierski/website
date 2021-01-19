@@ -1,6 +1,6 @@
 <template>
   <section class="landing">
-    <img src="@/img/avatar.jpg" class="avatar" alt="Adam Siekierski" />
+    <img src="@/img/avatar.png" class="avatar" alt="Adam Siekierski" />
     <h1>adam siekierski</h1>
     <h3 class="subtitle">
       {{ state.subtitle }}

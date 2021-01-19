@@ -27,18 +27,18 @@ import firebaseLogo from '../../img/technologies/firebase.svg';
 
 const technologies = [
   {
-    name: 'JavaScript',
-    logo: jsLogo,
-    bgColor: '#f7df1e',
-    fgColor: '#000000',
-    website: 'https://developer.mozilla.org/en-US/docs/Web',
-  },
-  {
     name: 'TypeScript',
     logo: tsLogo,
     bgColor: '#007acc',
     fgColor: '#ffffff',
     website: 'https://www.typescriptlang.org',
+  },
+  {
+    name: 'JavaScript',
+    logo: jsLogo,
+    bgColor: '#f7df1e',
+    fgColor: '#000000',
+    website: 'https://developer.mozilla.org/en-US/docs/Web',
   },
   {
     name: 'React',
@@ -48,11 +48,11 @@ const technologies = [
     website: 'https://reactjs.org',
   },
   {
-    name: 'Next.js',
-    logo: nextjsLogo,
-    bgColor: '#eeeeee',
-    fgColor: '#000000',
-    website: 'https://nextjs.org',
+    name: 'Gatsby',
+    logo: gatsbyLogo,
+    bgColor: '#663399',
+    fgColor: '#ffffff',
+    website: 'https://gatsbyjs.org',
   },
   {
     name: 'Swift',
@@ -76,11 +76,11 @@ const technologies = [
     website: 'https://nodejs.org',
   },
   {
-    name: 'Gatsby',
-    logo: gatsbyLogo,
-    bgColor: '#663399',
-    fgColor: '#ffffff',
-    website: 'https://gatsbyjs.org',
+    name: 'Next.js',
+    logo: nextjsLogo,
+    bgColor: '#eeeeee',
+    fgColor: '#000000',
+    website: 'https://nextjs.org',
   },
   {
     name: 'Vue.js',

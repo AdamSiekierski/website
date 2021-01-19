@@ -50,6 +50,12 @@ export default {
 
   @include mixins.themed() using ($theme) {
     border: 4px solid map-get($theme, 'fg');
+
+    @if map-get($theme, 'name') == 'light' {
+      .github-logo {
+        filter: invert(1);
+      }
+    }
   }
 }
 </style>
