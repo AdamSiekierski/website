@@ -20,7 +20,8 @@
 
 ### While designing the site, I took inspiration from:
 
-- [Adam Romański](https://github.com/helloroman/) - "Przepis na layout" series - idea for combining Roboto Mono font with dead simple dark theme
+- [Adam Romański](https://github.com/helloroman/) - "Przepis na layout" series - idea for combining
+  Roboto Mono font with dead simple dark theme
 - [Antoni Kepinski](https://github.com/xxczaki/) - Awesome idea for tiles with technology stack
 
 <h3 align="center"><i>SHAMELESS PLUG</i></h3>

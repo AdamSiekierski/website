@@ -22,10 +22,10 @@
   </section>
 </template>
 <script>
-import { reactive } from 'vue';
+import { reactive } from "vue";
 
 function* subtitleGenerator() {
-  const text = 'young hobbyist web developer';
+  const text = "young full-stack developer";
 
   for (let i = 0; i < text.length; i += 1) {
     yield text.slice(0, i + 1);
@@ -33,12 +33,12 @@ function* subtitleGenerator() {
 }
 
 function scrollToAbout() {
-  document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+  document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
 }
 
 export default {
   setup() {
-    const state = reactive({ subtitle: '' });
+    const state = reactive({ subtitle: "" });
 
     const generator = subtitleGenerator();
 
@@ -54,9 +54,9 @@ export default {
 
     return {
       scrollToAbout,
-      state,
+      state
     };
-  },
+  }
 };
 </script>
 <style lang="scss">
@@ -99,7 +99,7 @@ export default {
 
     & > path {
       @include mixins.themed() using ($theme) {
-        fill: map-get($theme, 'fg');
+        fill: map-get($theme, "fg");
       }
     }
 
