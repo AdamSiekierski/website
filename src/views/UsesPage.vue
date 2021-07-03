@@ -13,8 +13,10 @@
     />
     <ul>
       <li>
-        MacBook Pro 13 2017 - fortunately no touchbar, Intel Core i5, 8GB RAM, 256SSD - My daily
-        laptop
+        MacBook Pro 13 2020 - Intel Core i5, 16GB RAM, 512SSD - Currently my main laptop, I got from AppUnite
+      </li>
+      <li>
+        MacBook Pro 13 2017 - no touchbar, Intel Core i5, 8GB RAM, 256SSD - My private laptop
       </li>
       <li>LG 29-WK500 21:9 2560x1080px monitor</li>
       <li>CalDigit USB-C dock</li>
@@ -28,8 +30,7 @@
     <h2 id="software">#software</h2>
     Code editing
     <ul>
-      <li>Visual Studio Code - My main IDE</li>
-      <li>Webstorm - I sometimes use it, as I got it for free 💸</li>
+      <li>WebStorm - My main IDE</li>
       <li>
         Vim - I try to force myself using it, but I'm not that good at using it. At least I have it
         set up
@@ -40,16 +41,16 @@
     <ul>
       <li>iTerm 2</li>
       <li>oh-my-zsh</li>
+      <li>spaceship-prompt</li>
     </ul>
     Other apps I use very often
     <ul>
-      <li>Firefox Developer Edition</li>
+      <li>Chrome</li>
       <li>Spotify</li>
-      <li>Evernote</li>
       <li>Figma</li>
       <li>Postman</li>
       <li>XMind</li>
-      <li>Spectacle - an amazing macOS app for managing windows</li>
+      <li>Rectangle - an amazing macOS app for managing windows</li>
     </ul>
     <h2 id="gear">#gear</h2>
     Recording
@@ -71,14 +72,14 @@
     Personal stuff
     <ul>
       <li>iPhone XR 64GB (PRODUCT)<sup>RED</sup></li>
-      <li>Cube Reaction GTC 2x 2017 29er Bike</li>
+      <li>Focus JAM 6.9 Mountain Bike</li>
     </ul>
     <h2 id="setup">#setup</h2>
     <details>
       <summary>VSCode Setup</summary>
       <ul>
         <li>Font: JetBrains Mono, 14</li>
-        <li>Theme: Switching between Material Ocean and One Dark Pro</li>
+        <li>Theme: Material Deep Ocean</li>
         <li>
           Nice plugins I have:
           <ul>
@@ -100,7 +101,7 @@
       <summary>Terminal Setup</summary>
       <ul>
         <li>Font: JetBrains Mono, 14</li>
-        <li>Theme: Switching between Material Ocean and One Dark</li>
+        <li>Theme: Nord</li>
         <li>Emulator: iTerm 2</li>
         <li>
           ZSH Setup:
@@ -135,7 +136,7 @@
 
 a {
   @include mixins.themed() using ($theme) {
-    color: map-get($theme, 'fg');
+    color: map-get($theme, "fg");
   }
 }
 
