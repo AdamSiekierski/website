@@ -10,7 +10,6 @@
       </button>
       <div>
         <router-link to="/" active-class="--active">home</router-link>
-        <router-link to="/projects">projects</router-link>
         <router-link to="/uses">uses</router-link>
       </div>
     </nav>
@@ -21,29 +20,29 @@
   </div>
 </template>
 <script>
-import { ref, watch } from 'vue';
-import light from './img/icons/day.svg';
-import dark from './img/icons/night.svg';
+import { ref, watch } from "vue";
+import light from "./img/icons/day.svg";
+import dark from "./img/icons/night.svg";
 
 export default {
   setup() {
-    const theme = ref('dark');
+    const theme = ref("dark");
 
-    if (localStorage.getItem('theme') === 'light') {
-      theme.value = 'light';
+    if (localStorage.getItem("theme") === "light") {
+      theme.value = "light";
     }
 
     function toggleTheme() {
-      const newTheme = theme.value === 'dark' ? 'light' : 'dark';
+      const newTheme = theme.value === "dark" ? "light" : "dark";
 
-      localStorage.setItem('theme', newTheme);
+      localStorage.setItem("theme", newTheme);
       theme.value = newTheme;
     }
 
     watch(
       theme,
       (val) => {
-        document.documentElement.setAttribute('data-theme', val);
+        document.documentElement.setAttribute("data-theme", val);
       },
       { immediate: true },
     );
@@ -60,7 +59,7 @@ export default {
 <style lang="scss">
 @use './styles/mixins.scss' as mixins;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -72,18 +71,18 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 
   @include mixins.themed() using ($theme) {
-    background-color: map-get($theme, 'bg');
+    background-color: map-get($theme, "bg");
   }
 }
 
 .app {
   overflow: hidden;
   @include mixins.themed() using ($theme) {
-    background-color: map-get($theme, 'bg');
-    color: map-get($theme, 'fg');
+    background-color: map-get($theme, "bg");
+    color: map-get($theme, "fg");
   }
 }
 
@@ -118,11 +117,11 @@ body {
     a {
       margin: 0 5px;
       text-decoration: none;
-      color: map-get($theme, 'fg');
+      color: map-get($theme, "fg");
     }
 
     .router-link-exact-active {
-      border-bottom: 1px solid map-get($theme, 'fg');
+      border-bottom: 1px solid map-get($theme, "fg");
     }
   }
 }
@@ -136,8 +135,8 @@ body {
 
 ::selection {
   @include mixins.themed() using ($theme) {
-    background: map-get($theme, 'fg');
-    color: map-get($theme, 'bg');
+    background: map-get($theme, "fg");
+    color: map-get($theme, "bg");
   }
 }
 </style>

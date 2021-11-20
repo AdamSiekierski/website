@@ -54,48 +54,41 @@
   </section>
 </template>
 <script>
-import * as yup from 'yup';
-import { useToast } from 'vue-toastification';
-import { reactive, ref } from 'vue';
+import * as yup from "yup";
+import { useToast } from "vue-toastification";
+import { reactive, ref } from "vue";
 
-import Item from './Item.vue';
+import Item from "./Item.vue";
 
-import githubLogo from '../../img/websites/github.png';
-import twitterLogo from '../../img/websites/twitter.svg';
-import instagramLogo from '../../img/websites/instagram.svg';
-import linkedinLogo from '../../img/websites/linkedin.svg';
-import redditLogo from '../../img/websites/reddit.svg';
+import githubLogo from "../../img/websites/github.png";
+import twitterLogo from "../../img/websites/twitter.svg";
+import instagramLogo from "../../img/websites/instagram.svg";
+import linkedinLogo from "../../img/websites/linkedin.svg";
 
 const sites = [
   {
-    name: 'GitHub',
-    link: 'https://github.com/AdamSiekierski',
+    name: "GitHub",
+    link: "https://github.com/AdamSiekierski",
     icon: githubLogo,
-    bgColor: '#24292E',
+    bgColor: "#24292E",
   },
   {
-    name: 'Instagram',
-    link: 'https://instagram.com/a.siekierski',
+    name: "Instagram",
+    link: "https://instagram.com/a.siekierski",
     icon: instagramLogo,
-    bgColor: 'linear-gradient(45deg, #EB001E, #6100BF)',
+    bgColor: "linear-gradient(45deg, #EB001E, #6100BF)",
   },
   {
-    name: 'Twitter',
-    link: 'https://twitter.com/a_siekierski',
+    name: "Twitter",
+    link: "https://twitter.com/a_siekierski",
     icon: twitterLogo,
-    bgColor: '#1DA1F2',
+    bgColor: "#1DA1F2",
   },
   {
-    name: 'Linkedin',
-    link: 'https://www.linkedin.com/in/adam-siekierski-b6b7401b2/',
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/adam-siekierski-b6b7401b2/",
     icon: linkedinLogo,
-    bgColor: '#0077B5',
-  },
-  {
-    name: 'Reddit',
-    link: 'https://www.reddit.com/user/adamsiekierski',
-    icon: redditLogo,
-    bgColor: '#FF4500',
+    bgColor: "#0077B5",
   },
 ];
 
@@ -116,14 +109,14 @@ export default {
 
     const email = reactive({
       email: {
-        value: '',
+        value: "",
         error: false,
       },
     });
 
     const message = reactive({
       message: {
-        value: '',
+        value: "",
         error: false,
       },
     });
@@ -144,21 +137,21 @@ export default {
             method: form.method,
             body: data,
             headers: {
-              Accept: 'application/json',
+              Accept: "application/json",
             },
           }).then((res) => {
             loading.value = false;
 
             if (res.status === 200) {
-              toast.success('Successfully sent an email!');
+              toast.success("Successfully sent an email!");
             } else {
               toast.error("Couldn't send the email. Try again later");
             }
 
             form.reset();
-            email.value = '';
+            email.value = "";
             email.error = false;
-            message.value = '';
+            message.value = "";
             message.error = false;
           });
         }
@@ -174,8 +167,8 @@ export default {
           .validate({ email: email.value, message: message.value }, { abortEarly: false })
           .catch((errors) => {
             errors.inner.map((error) => {
-              if (error.path === 'email') email.error = true;
-              if (error.path === 'message') message.error = true;
+              if (error.path === "email") email.error = true;
+              if (error.path === "message") message.error = true;
             });
           });
       }
@@ -206,7 +199,7 @@ export default {
     }
 
     a {
-      color: map-get($theme, 'fg');
+      color: map-get($theme, "fg");
     }
 
     &-form {
@@ -220,10 +213,10 @@ export default {
         font-size: 1em;
         width: 100%;
         background: transparent;
-        color: map-get($theme, 'fg');
+        color: map-get($theme, "fg");
         outline: none;
         border: none;
-        border-bottom: 3px solid map-get($theme, 'fg');
+        border-bottom: 3px solid map-get($theme, "fg");
         resize: none;
 
         transition: border-bottom 0.5s ease;
@@ -239,26 +232,26 @@ export default {
         padding: 5px;
         font-size: 1em;
         background: transparent;
-        color: map-get($theme, 'fg');
+        color: map-get($theme, "fg");
         outline: none;
         border: none;
-        border-bottom: 3px solid map-get($theme, 'fg');
+        border-bottom: 3px solid map-get($theme, "fg");
         cursor: pointer;
 
         transition: color 0.3s ease, background-color 0.3s ease, border-bottom 0.5s ease;
 
         &:hover {
-          background-color: map-get($theme, 'fg');
-          color: map-get($theme, 'bg');
+          background-color: map-get($theme, "fg");
+          color: map-get($theme, "bg");
         }
 
         &:disabled {
           cursor: not-allowed;
-          color: map-get($theme, 'fg');
+          color: map-get($theme, "fg");
 
           &:hover {
             background-color: transparent;
-            color: map-get($theme, 'fg');
+            color: map-get($theme, "fg");
           }
         }
 
@@ -283,8 +276,8 @@ export default {
 .Vue-Toastification__toast {
   @include mixins.themed() using ($theme) {
     border-radius: 0;
-    background-color: map-get($theme, 'fg');
-    color: map-get($theme, 'bg');
+    background-color: map-get($theme, "fg");
+    color: map-get($theme, "bg");
     font-family: inherit;
 
     @media screen and (max-width: 600px) {

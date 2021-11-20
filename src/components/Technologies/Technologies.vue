@@ -9,106 +9,90 @@
   </section>
 </template>
 <script>
-import Item from './Item.vue';
+import Item from "./Item.vue";
 
-import { useAge } from '../../hooks/useAge';
+import { useAge } from "../../hooks/useAge";
 
-import reactLogo from '../../img/technologies/react.svg';
-import gatsbyLogo from '../../img/technologies/gatsby.svg';
-import nodejsLogo from '../../img/technologies/nodejs.svg';
-import jsLogo from '../../img/technologies/js.svg';
-import tsLogo from '../../img/technologies/ts.svg';
-import vueLogo from '../../img/technologies/vue.svg';
-import nextjsLogo from '../../img/technologies/nextjs.svg';
-import graphqlLogo from '../../img/technologies/graphql.svg';
-import denoLogo from '../../img/technologies/deno.svg';
-import swiftLogo from '../../img/technologies/swift.svg';
-import firebaseLogo from '../../img/technologies/firebase.svg';
+import reactLogo from "../../img/technologies/react.svg";
+import gatsbyLogo from "../../img/technologies/gatsby.svg";
+import nodejsLogo from "../../img/technologies/nodejs.svg";
+import jsLogo from "../../img/technologies/js.svg";
+import tsLogo from "../../img/technologies/ts.svg";
+import vueLogo from "../../img/technologies/vue.svg";
+import nextjsLogo from "../../img/technologies/nextjs.svg";
+import elixirLogo from "../../img/technologies/elixir.png";
+import swiftLogo from "../../img/technologies/swift.svg";
 
 const technologies = [
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     logo: tsLogo,
-    bgColor: '#007acc',
-    fgColor: '#ffffff',
-    website: 'https://www.typescriptlang.org',
+    bgColor: "#007acc",
+    fgColor: "#ffffff",
+    website: "https://www.typescriptlang.org",
   },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     logo: jsLogo,
-    bgColor: '#f7df1e',
-    fgColor: '#000000',
-    website: 'https://developer.mozilla.org/en-US/docs/Web',
+    bgColor: "#f7df1e",
+    fgColor: "#000000",
+    website: "https://developer.mozilla.org/en-US/docs/Web",
   },
   {
-    name: 'React',
+    name: "React",
     logo: reactLogo,
-    bgColor: '#53C1DE',
-    fgColor: '#000000',
-    website: 'https://reactjs.org',
+    bgColor: "#53C1DE",
+    fgColor: "#000000",
+    website: "https://reactjs.org",
   },
   {
-    name: 'Gatsby',
+    name: "Gatsby",
     logo: gatsbyLogo,
-    bgColor: '#663399',
-    fgColor: '#ffffff',
-    website: 'https://gatsbyjs.org',
+    bgColor: "#663399",
+    fgColor: "#ffffff",
+    website: "https://gatsbyjs.org",
   },
   {
-    name: 'Swift',
+    name: "Swift",
     logo: swiftLogo,
-    bgColor: '#f57929',
-    fgColor: '#ffffff',
-    website: 'https://swift.org/',
+    bgColor: "#f57929",
+    fgColor: "#ffffff",
+    website: "https://swift.org/",
   },
   {
-    name: 'GraphQL',
-    logo: graphqlLogo,
-    bgColor: '#E535AB',
-    fgColor: '#ffffff',
-    website: 'https://graphql.org',
-  },
-  {
-    name: 'Node.js',
+    name: "Node.js",
     logo: nodejsLogo,
-    bgColor: '#539E43',
-    fgColor: '#ffffff',
-    website: 'https://nodejs.org',
+    bgColor: "#539E43",
+    fgColor: "#ffffff",
+    website: "https://nodejs.org",
   },
   {
-    name: 'Next.js',
+    name: "Next.js",
     logo: nextjsLogo,
-    bgColor: '#eeeeee',
-    fgColor: '#000000',
-    website: 'https://nextjs.org',
+    bgColor: "#eeeeee",
+    fgColor: "#000000",
+    website: "https://nextjs.org",
   },
   {
-    name: 'Vue.js',
+    name: "Vue.js",
     logo: vueLogo,
-    bgColor: '#42b883',
-    fgColor: '#ffffff',
-    website: 'https://vuejs.org',
+    bgColor: "#42b883",
+    fgColor: "#ffffff",
+    website: "https://vuejs.org",
   },
   {
-    name: 'React Native',
+    name: "React Native",
     logo: reactLogo,
-    bgColor: '#53C1DE',
-    fgColor: '#000000',
-    website: 'https://reactnative.dev',
+    bgColor: "#53C1DE",
+    fgColor: "#000000",
+    website: "https://reactnative.dev",
   },
   {
-    name: 'Deno',
-    logo: denoLogo,
-    bgColor: '#eeeeee',
-    fgColor: '#000000',
-    website: 'https://deno.land',
-  },
-  {
-    name: 'Firebase',
-    logo: firebaseLogo,
-    bgColor: '#039BE5',
-    fgColor: '#ffffff',
-    website: 'https://firebase.google.com',
+    name: "Elixir",
+    logo: elixirLogo,
+    bgColor: "#ffffff",
+    fgColor: "#000000",
+    website: "https://elixir-lang.org",
   },
 ];
 
@@ -139,7 +123,7 @@ export default {
     padding-bottom: 15px;
 
     grid-template-rows: auto auto;
-    grid-template-columns: repeat(6, 200px);
+    grid-template-columns: repeat(5, 200px);
   }
 }
 </style>
