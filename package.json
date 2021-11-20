@@ -9,7 +9,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist -r https://github.com/AdamSiekierski/adamsiekierski.github.io"
+    "deploy": "gh-pages -d dist -r https://github.com/AdamSiekierski/adamsiekierski.github.io -b master"
   },
   "dependencies": {
     "axios": "^0.20.0",
