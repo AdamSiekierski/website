@@ -2,11 +2,14 @@
   "name": "siekierski.me",
   "version": "1.0.0",
   "private": true,
+  "homepage": "siekierski.me",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist -r https://github.com/AdamSiekierski/adamsiekierski.github.io"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -20,6 +23,7 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@vue/cli-plugin-eslint": "~4.5.7",
     "@vue/cli-plugin-unit-jest": "~4.5.7",
