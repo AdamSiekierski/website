@@ -23,4 +23,4 @@
 - [Antoni Kepinski](https://github.com/xxczaki/) - Awesome idea for tiles with technology stack
 
 <h3 align="center"><i>SHAMELESS PLUG</i></h3>
-<p align="center">Check out <a href="https://require.podcast.gq"><b>Require Podcast</b></a> - Polish JavaScript podcast hosted by me and <a href="https://github.com/datejer/">Artur Dudek</a></p>
+<p align="center">Check out <a href="https://require.pl"><b>Require Podcast</b></a> - Polish JavaScript podcast hosted by me and <a href="https://github.com/datejer/">Artur Dudek</a></p>

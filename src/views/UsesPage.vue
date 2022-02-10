@@ -57,7 +57,7 @@
     <ul>
       <li>
         Behringer C1U - My microphone for recording the
-        <a href="https://require.podcast.gq">Require Podcast</a>
+        <a href="https://require.pl">Require Podcast</a>
       </li>
       <li>Behrginger UM2 audio interface</li>
       <li>

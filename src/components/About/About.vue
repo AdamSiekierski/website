@@ -24,7 +24,7 @@
       </p>
       <p>
         Also, I'm an author of a Polish JavaScript podcast -
-        <a href="https://require.podcast.gq">Require Podcast</a>. If you can understand this
+        <a href="https://require.pl">Require Podcast</a>. If you can understand this
         difficult language, check it out 🎙.
       </p>
       <p>
